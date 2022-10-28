@@ -1,5 +1,22 @@
-# import required modules
 import pip._vendor.requests, json
+from typing import Any, Text, Dict, List
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+
+
+class ActionHelloWorld(Action):
+
+     def name(self) -> Text:
+         return "action_tell_weather"
+
+     def run(self, dispatcher: CollectingDispatcher,
+             tracker: Tracker,
+             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+         dispatcher.utter_message(text="Wie ist das Wetter?")
+
+         return []
+
 
 # Enter your API key here
 api_key = "0ad3ff8e75c082c6fc193348b16958b1"
