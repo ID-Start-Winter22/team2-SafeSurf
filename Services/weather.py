@@ -55,14 +55,22 @@ if x["cod"] != "404":
     weather_description = z[0]["description"]
 
     # print following values
-    print(" Temperature = " +
+    print(
+        "\n " +
+        "Temperature = " +
                     str(current_temperature) + "°C" +
+        "\n " +
         "\n Luftdruck = " +
                     str(current_pressure) + " hPa" +
+                "\n " +
         "\n Humidity = " +
                     str(current_humidity) + "%" +
+                "\n " +
         "\n Beschreibung = " +
-                    str(weather_description))
+                    str(weather_description) +
+        "\n " +
+        "\n Have a Nice Day!!!! " +
+        "\n " )
 
 else:
     print(" City Not Found ")
