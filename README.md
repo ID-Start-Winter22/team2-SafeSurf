@@ -1,5 +1,4 @@
-# Chatbot Projektmodul Start
+#Banifli Discord Bot
 
-Beschreiben Sie kurz Ihre Projektidee (mit Bild oder Storyboard)
-
-Verweisen Sie für mehr Information auf die Wiki Seite
+TODO: StoryBoard + Wiki
+TODO: Changelog
