@@ -1,5 +1,5 @@
 # import required modules
-import requests, json
+import pip._vendor.requests, json
 
 # Enter your API key here
 api_key = "0ad3ff8e75c082c6fc193348b16958b1"
@@ -16,7 +16,7 @@ complete_url = base_url + "appid=" + api_key + "&q=" + city_name + "&units=metri
 
 # get method of requests module
 # return response object
-response = requests.get(complete_url)
+response = pip._vendor.requests.get(complete_url)
 
 # json method of response object
 # convert json format data into
