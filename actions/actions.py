@@ -4,8 +4,6 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
 
-import mvg_api
-
 
 # This is a simple example for a custom action which utters "Hello World!"
 
