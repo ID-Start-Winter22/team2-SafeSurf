@@ -89,3 +89,12 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: inquire_weather
+  examples: |
+    - Wie ist das Wetter in [München](place)?
+    - Wie ist das Wetter in [Berlin](place)?
+- lookup: place
+  examples: |
+    - München
+    - Berlin
