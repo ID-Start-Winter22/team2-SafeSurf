@@ -98,3 +98,8 @@ nlu:
   examples: |
     - München
     - Berlin
+
+- intent: inquire_joke
+  examples: |
+    - Bring mich zum lachen
+    - Erzähle mir einen Witz

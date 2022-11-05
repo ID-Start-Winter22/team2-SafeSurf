@@ -16,3 +16,8 @@ rules:
   steps: 
   - intent: inquire_weather
   - action: action_tell_weather
+
+- rule: Tell a joke
+  steps:
+  - intent: inquire_joke
+  - action: action_tell_joke
