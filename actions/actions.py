@@ -1,4 +1,4 @@
-import requests, json
+import requests, json, random
 from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
@@ -38,3 +38,16 @@ class Jokes(Action):
         joke = jr["text"]
         dispatcher.utter_message("Okay, hier ist ein Witz für dich. \n" + joke)
         return []
+
+class quote(Action):
+    def name(self) -> Text:
+        return "action_tell_quote"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:  
+        url = "https://type.fit/api/quotes"
+        response = requests.get(url)
+        qod = response.json()[0:]
+        output = random.choice(qod)
+        dispatcher.utter_message("Okay, hier ist ein Spruch für dich.\n" + output["text"] + " Author:" + output[" author"])
+        return[]

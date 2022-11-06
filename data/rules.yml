@@ -21,3 +21,8 @@ rules:
   steps:
   - intent: inquire_joke
   - action: action_tell_joke
+
+- rule: Tell a quote
+  steps:
+  - intent: inquire_quote
+  - action: action_tell_quote

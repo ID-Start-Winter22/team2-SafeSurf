@@ -103,3 +103,8 @@ nlu:
   examples: |
     - Bring mich zum lachen
     - Erzähle mir einen Witz
+
+- intent: inquire_quote
+  examples: |
+    - Erzähle mir eine quote
+    - Erzähle mir einen Spruch

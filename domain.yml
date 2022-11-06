@@ -47,3 +47,4 @@ session_config:
 actions:
   - action_tell_weather
   - action_tell_joke
+  - action_tell_quote
