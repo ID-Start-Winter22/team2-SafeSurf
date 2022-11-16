@@ -32,7 +32,7 @@ class Jokes(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        url = "https://witzapi.de/api/joke/"
+        url = "https://witzapi.de/api/joke"
         response = requests.get(url)
         jr = response.json()[0]
         joke = jr["text"]
@@ -45,9 +45,9 @@ class quote(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:  
-        url = "https://type.fit/api/quotes"
+        url = "https://type.fit/api/quotes/"
         response = requests.get(url)
         qod = response.json()[0:]
         output = random.choice(qod)
-        dispatcher.utter_message("Okay, hier ist ein Spruch für dich.\n" + output["text"] + " Author:" + output[" author"])
+        dispatcher.utter_message("Okay, hier ist ein Spruch für dich.\n" + output["text"] + " Author: " + output["author"])
         return[]
