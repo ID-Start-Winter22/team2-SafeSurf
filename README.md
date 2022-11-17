@@ -51,8 +51,8 @@ Hier sollte am besten noch was stehen. lol
 
 ### Entwickelt mit
 
-* [\![Python\]\[Python\]\]\[https://www.python.org/]
-* [\![Rasa\]\[Rasa\]\]\[https://rasa.com/]
+* [Python](https://www.python.org/)
+* [Rasa](https://rasa.com/)
 
 
 <p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
