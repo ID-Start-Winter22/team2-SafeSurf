@@ -136,7 +136,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 ## [Roadmap](https://github.com/ID-Start-Winter22/team2-banifli/issues/4#issue-1449828359)
 
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/ID-Start-Winter22/team2-banifli/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
 
