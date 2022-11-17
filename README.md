@@ -47,7 +47,7 @@ Dein alltäglicher Studibegleiter
 
 Hier sollte am besten noch was stehen. lol
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
 
 ### Entwickelt mit
 
@@ -55,7 +55,7 @@ Hier sollte am besten noch was stehen. lol
 * [\![Rasa\]\[Rasa\]\]\[https://rasa.com/]
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
 
 ## Erstmalige Installation
 
@@ -118,7 +118,7 @@ Um den Bot zu deployen, werden folgende NPM Packete benötigt:
    
    ```
 
-<p align="right">(<a href="#readme-top">Zurück nach oben</a>)</p>
+<p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
 
 ## Nutzung
 
@@ -126,7 +126,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 *For more examples, please refer to the [Documentation](https://github.com/ID-Start-Winter22/team2-banifli/wiki)*
 
-<p align="right">(<a href="#readme-top">Zurück nach oben</a>)</p>
+<p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
 
 <!-- ROADMAP -->
 
@@ -139,7 +139,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#readme-top">Zurück nach oben</a>)</p>
+<p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
 
 <!-- LICENSE -->
 
@@ -147,7 +147,7 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#readme-top">Zurück nach oben</a>)</p>
+<p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
 
 
 ## Konakt
@@ -159,7 +159,7 @@ wiest@hm.edu
 
 Project Link: <https://github.com/ID-Start-Winter22/team2-banifli/>
 
-<p align="right">(<a href="#readme-top">Zurück nach oben</a>)</p>
+<p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
 
 
 ## Danksagungen
@@ -168,4 +168,4 @@ Project Link: <https://github.com/ID-Start-Winter22/team2-banifli/>
 * 
 * 
 
-<p align="right">(<a href="#readme-top">Zurück nach oben</a>)</p>
+<p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
