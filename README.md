@@ -6,7 +6,7 @@
 <h3 align="center">Banifli Chatbot</h3>
 
 <p align="center">
-Dein alltäglicher Studibegleiter
+Dein alltäglicher Studienbegleitung
 <br />
 <a href="https://github.com/ID-Start-Winter22/team2-banifli/wiki"><strong>Erforsche das Wiki »</strong></a>
 <br />
