@@ -60,8 +60,11 @@ Hier sollte am besten noch was stehen. lol
 ## Erstmalige Installation
 
 * Rasa installieren (siehe https://github.com/michaeleggers/RasaIntro)
-* `git clone https://github.com/ID-Start-Winter22/einfacherChatbot.git`
-* `cd einfacherChatbot`
+* `git clone https://github.com/ID-Start-Winter22/team2-banifli.git`
+* `cd team2-banifli`
+* `pip install mvg-api`
+* `pip install requests`
+* `pip install json`
 * `conda activate rasaenv`
 * `rasa train`
 * `rasa run --cors "*"`
@@ -130,12 +133,8 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 <!-- ROADMAP -->
 
-## Roadmap
+## [Roadmap](https://github.com/ID-Start-Winter22/team2-banifli/issues/4#issue-1449828359)
 
-* [ ] Feature 1
-* [ ] Feature 2
-* [ ] Feature 3
-  * [ ] Nested Feature
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
