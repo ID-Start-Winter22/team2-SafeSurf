@@ -22,23 +22,23 @@ slots:
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hey! Wie geht's dir?"
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
+  - text: "Hier etwas um dich aufzumuntern:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
-  - text: "Did that help you?"
+  - text: "Hat dir das geholfen?"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "Sehr schön, weiter geht's!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Tschüs"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "Ich bin Banifli, ihr Studentenhelfer. Das sollten sie doch wissen."
 
 session_config:
   session_expiration_time: 60
