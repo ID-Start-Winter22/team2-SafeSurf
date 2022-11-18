@@ -136,18 +136,9 @@ Use this space to show useful examples of how a project can be used. Additional 
 ## [Roadmap](https://github.com/ID-Start-Winter22/team2-banifli/issues/4#issue-1449828359)
 
 
-See the [open issues](https://github.com/ID-Start-Winter22/team2-banifli/issues) for a full list of proposed features (and known issues).
+Siehe [offene Issues](https://github.com/ID-Start-Winter22/team2-banifli/issues) für alle Zukünftigen Features und bekannte Fehler.
 
 <p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
-
-<!-- LICENSE -->
-
-## Lizenz
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
-
 
 ## Konakt
 
