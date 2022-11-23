@@ -84,14 +84,14 @@ Um den Bot zu deployen, werden folgende NPM Packete benötigt:
 * npm
 
   ```
-git clone https://github.com/ID-Start-Winter22/team2-banifli.git
-cd team2-banifli
-pip install mvg-api
-pip install requests
-pip install json
-conda activate rasaenv
-rasa train
-rasa run --cors "*"
+  git clone https://github.com/ID-Start-Winter22/team2-banifli.git
+  cd team2-banifli
+  pip install mvg-api
+  pip install requests
+  pip install json
+  conda activate rasaenv
+  rasa train
+  rasa run --cors "*"
   
   ```
   * Python
