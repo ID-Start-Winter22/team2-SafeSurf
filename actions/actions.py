@@ -24,7 +24,6 @@ class ActionTellWeather(Action):
         dispatcher.utter_message(f"In {city_name} sind es " + str(current_temperature) + "°C. \nAktueller Wetterstatus: " + str(weather_description))
         return []
 
-
 class Jokes(Action):
     def name(self) -> Text:
         return "action_tell_joke"
