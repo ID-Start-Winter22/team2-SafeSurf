@@ -55,7 +55,7 @@ Dein alltäglicher Studienbegleitung
 
 ## Erstmalige Installation
 
-* Rasa installieren (siehe https://github.com/michaeleggers/RasaIntro)
+* [Rasa installieren](siehe https://github.com/michaeleggers/RasaIntro)
 * `git clone https://github.com/ID-Start-Winter22/team2-banifli.git`
 * `cd team2-banifli`
 * `pip install mvg-api`
@@ -97,22 +97,17 @@ Um den Bot zu deployen, werden folgende NPM Packete benötigt:
 
    ```
    git clone https://github.com/ID-Start-Winter22/team2-banifli/
-   
    ```
 2. Install NPM packages
 
    ```
    npm install rasa
    npm install mvg
-   
    ```
 3. API Key von openweather einetzen in Line 16 `action.py`
 
    ```
-   
    api_key = "API KEY eingeben"
-   
-   
    ```
 
 <p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
@@ -136,10 +131,10 @@ Siehe [offene Issues](https://github.com/ID-Start-Winter22/team2-banifli/issues)
 
 Schickt uns gerne eine Mail an:
 
-wiest@hm.edu
-basse@hm.edu
-lvock@hm.edu
-duske@hm.edu
+wiest@hm.edu | 
+basse@hm.edu |
+lvock@hm.edu |
+duske@hm.edu |
 
 
 Project Link: <https://github.com/ID-Start-Winter22/team2-banifli/>
@@ -152,6 +147,5 @@ Project Link: <https://github.com/ID-Start-Winter22/team2-banifli/>
 * [gsocher](https://github.com/gsocher)
 * [michaeleggers](https://github.com/michaeleggers)
 * [mvg-api by uberardy](https://pypi.org/user/uberardy/)
-* 
 
 <p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
