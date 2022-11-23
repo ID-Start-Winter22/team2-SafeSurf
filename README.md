@@ -94,10 +94,10 @@ Um den Bot zu deployen, werden folgende NPM Packete benötigt:
   rasa run --cors "*"
   
   ```
-  * Python
+  * Server starten
 
   ```
-  Python Version 9.13.3
+  python -m http.server
   ```
 
 ### Installation
