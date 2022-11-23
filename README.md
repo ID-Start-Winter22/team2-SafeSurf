@@ -34,8 +34,6 @@ Dein alltäglicher Studienbegleitung
 </li>
 <li><a href="#nutzung">Nutzung</a></li>
 <li><a href="#roadmap">Roadmap</a></li>
-<li><a href="#contributing">Contributing</a></li>
-<li><a href="#lizenz">Lizenz</a></li>
 <li><a href="#kontakt">Kontakt</a></li>
 <li><a href="#danksagungen">Danksagungen</a></li>
 </ol>
@@ -43,9 +41,7 @@ Dein alltäglicher Studienbegleitung
 
 ## Über das Projekt
 
-<img width="340" alt="image" src="https://user-images.githubusercontent.com/14870896/197070856-6547d5d8-1ea7-4f84-8ad5-82c4618cb374.png">
-
-Hier sollte am besten noch was stehen. lol
+<img width="200" alt="image" src="https://user-images.githubusercontent.com/14870896/197070856-6547d5d8-1ea7-4f84-8ad5-82c4618cb374.png">
 
 <p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
 
@@ -84,20 +80,15 @@ Um den Bot zu deployen, werden folgende NPM Packete benötigt:
 * npm
 
   ```
-  git clone https://github.com/ID-Start-Winter22/team2-banifli.git
-  cd team2-banifli
-  pip install mvg-api
-  pip install requests
-  pip install json
-  conda activate rasaenv
-  rasa train
-  rasa run --cors "*"
+  npm install npm@latest -g
+  npm install rasa
+  npm install mvg
   
   ```
-  * Server starten
+  * Python
 
   ```
-  python -m http.server
+  Python Version 9.13.3
   ```
 
 ### Installation
@@ -107,14 +98,12 @@ Um den Bot zu deployen, werden folgende NPM Packete benötigt:
    ```
    git clone https://github.com/ID-Start-Winter22/team2-banifli/
    
-   
    ```
 2. Install NPM packages
 
    ```
    npm install rasa
    npm install mvg
-   
    
    ```
 3. API Key von openweather einetzen in Line 16 `action.py`
@@ -130,15 +119,13 @@ Um den Bot zu deployen, werden folgende NPM Packete benötigt:
 
 ## Nutzung
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-*For more examples, please refer to the [Documentation](https://github.com/ID-Start-Winter22/team2-banifli/wiki)*
+*Anwendungsbeispiele findet man in der Dokumentation.  [Dokumentation](https://github.com/ID-Start-Winter22/team2-banifli/wiki)*
 
 <p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
 
 <!-- ROADMAP -->
 
-## [Roadmap](https://github.com/ID-Start-Winter22/team2-banifli/issues/4#issue-1449828359)
+## Roadmap
 
 
 Siehe [offene Issues](https://github.com/ID-Start-Winter22/team2-banifli/issues) für alle Zukünftigen Features und bekannte Fehler.
@@ -150,6 +137,9 @@ Siehe [offene Issues](https://github.com/ID-Start-Winter22/team2-banifli/issues)
 Schickt uns gerne eine Mail an:
 
 wiest@hm.edu
+basse@hm.edu
+lvock@hm.edu
+duske@hm.edu
 
 
 Project Link: <https://github.com/ID-Start-Winter22/team2-banifli/>
@@ -159,8 +149,9 @@ Project Link: <https://github.com/ID-Start-Winter22/team2-banifli/>
 
 ## Danksagungen
 
-* 
-* 
+* [gsocher](https://github.com/gsocher)
+* [michaeleggers](https://github.com/michaeleggers)
+* [mvg-api by uberardy](https://pypi.org/user/uberardy/)
 * 
 
 <p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
