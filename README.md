@@ -55,7 +55,7 @@ Dein alltäglicher Studienbegleitung
 
 ## Erstmalige Installation
 
-* [Rasa installieren](siehe https://github.com/michaeleggers/RasaIntro)
+* [Rasa installieren](https://github.com/michaeleggers/RasaIntro)
 * `git clone https://github.com/ID-Start-Winter22/team2-banifli.git`
 * `cd team2-banifli`
 * `pip install mvg-api`
