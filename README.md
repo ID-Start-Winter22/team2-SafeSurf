@@ -94,13 +94,14 @@ Um den Bot zu deployen, werden folgende Packete benötigt:
    ```
    conda activate rasaenv
    rasa train
-   rasa run --cors "*"
+   rasa run actions
    ```
 
 5. Server Starten
    In einem zweiten Terminal
    ```
    python -m http.server
+   rasa shell 
    ```
    In einem Browser http://localhost:8000/
 
