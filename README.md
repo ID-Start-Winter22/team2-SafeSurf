@@ -39,9 +39,9 @@ Dein alltäglicher Studienbegleitung
 </ol>
 </details>
 
-## Über das Projekt
+## Storyboard
 
-<img width="200" alt="image" src="https://user-images.githubusercontent.com/14870896/197070856-6547d5d8-1ea7-4f84-8ad5-82c4618cb374.png">
+<img width="634" alt="Screenshot 2022-11-24 at 13 25 47" src="https://user-images.githubusercontent.com/87561264/203784163-3ed2bf25-0912-4b38-be7a-3dbc4be8c4e5.png">
 
 <p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
 
