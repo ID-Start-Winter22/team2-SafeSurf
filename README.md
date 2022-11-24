@@ -53,42 +53,19 @@ Dein alltäglicher Studienbegleitung
 
 <p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
 
-## Erstmalige Installation
-
-* [Rasa installieren](https://github.com/michaeleggers/RasaIntro)
-* `git clone https://github.com/ID-Start-Winter22/team2-banifli.git`
-* `cd team2-banifli`
-* `pip install mvg-api`
-* `pip install requests`
-* `pip install json`
-* `conda activate rasaenv`
-* `rasa train`
-* `rasa run --cors "*"`
-
-
-in einem zweiten Terminal:
-
-* `python -m http.server`
-
-im Browser http://localhost:8000/
-
-
 ### Vorraussetzungen
 
-Um den Bot zu deployen, werden folgende NPM Packete benötigt:
+Um den Bot zu deployen, werden folgende Packete benötigt:
 
-* npm
-
-  ```
-  npm install npm@latest -g
-  npm install rasa
-  npm install mvg
-  
-  ```
-  * Python
+* Rasa
 
   ```
-  Python Version 9.13.3
+  https://github.com/michaeleggers/RasaIntro
+  ```
+* Python
+
+  ```
+  Python Version 3.9.13
   ```
 
 ### Installation
@@ -96,19 +73,38 @@ Um den Bot zu deployen, werden folgende NPM Packete benötigt:
 1. Clone the repo
 
    ```
-   git clone https://github.com/ID-Start-Winter22/team2-banifli/
+   git clone https://github.com/ID-Start-Winter22/team2-banifli.git
+   cd team2-banifli
    ```
-2. Install NPM packages
+2. Install pip packages
 
    ```
-   npm install rasa
-   npm install mvg
+   pip install mvg-api
+   pip install requests
+   pip install json
    ```
 3. API Key von openweather einetzen in Line 16 `action.py`
 
    ```
    api_key = "API KEY eingeben"
    ```
+   
+4. Rasa
+   
+   ```
+   conda activate rasaenv
+   rasa train
+   rasa run --cors "*"
+   ```
+
+5. Server Starten
+   In einem zweiten Terminal
+   ```
+   python -m http.server`
+   ```
+   In einem Browser http://localhost:8000/
+
+
 
 <p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
 
@@ -146,6 +142,6 @@ Project Link: <https://github.com/ID-Start-Winter22/team2-banifli/>
 
 * [gsocher](https://github.com/gsocher)
 * [michaeleggers](https://github.com/michaeleggers)
-* [mvg-api by uberardy](https://pypi.org/user/uberardy/)
+* [mvg-api by leftshift](https://github.com/leftshift/python_mvg_api)
 
 <p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
