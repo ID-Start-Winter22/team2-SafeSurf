@@ -39,18 +39,6 @@ Dein alltäglicher Studienbegleitung
 </ol>
 </details>
 
-## Storyboard
-
-<img width="634" alt="Screenshot 2022-11-24 at 13 25 47" src="https://user-images.githubusercontent.com/87561264/203784163-3ed2bf25-0912-4b38-be7a-3dbc4be8c4e5.png">
-
-<p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
-
-### Entwickelt mit
-
-* [Python](https://www.python.org/)
-* [Rasa](https://rasa.com/)
-
-
 <p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
 
 ### Vorraussetzungen
@@ -137,6 +125,11 @@ duske@hm.edu |
 Project Link: <https://github.com/ID-Start-Winter22/team2-banifli/>
 
 <p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
+
+## Entwickelt mit
+
+* [Python](https://www.python.org/)
+* [Rasa](https://rasa.com/)
 
 
 ## Danksagungen
