@@ -10,7 +10,6 @@ Dein alltäglicher Studienbegleitung
 <br />
 <a href="https://github.com/ID-Start-Winter22/team2-banifli/wiki"><strong>Erforsche das Wiki »</strong></a>
 <br />
-<br />
 ·
 <a href="https://github.com/ID-Start-Winter22/team2-banifli/issues">Fehler melden</a>
 </p>
@@ -40,6 +39,8 @@ Dein alltäglicher Studienbegleitung
 </details>
 
 <p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
+
+<img src="https://wiesty.de/images/uploads/exampleimages.png" alt="example chatbot images" width="100%" height="auto">
 
 ### Vorraussetzungen
 
