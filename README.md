@@ -38,8 +38,6 @@ Dein alltäglicher Studienbegleitung
 </ol>
 </details>
 
-<p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
-
 <img src="https://wiesty.de/images/uploads/exampleimages.png" alt="example chatbot images" width="100%" height="auto">
 
 ### Vorraussetzungen
