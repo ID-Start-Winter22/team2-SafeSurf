@@ -100,7 +100,7 @@ Um den Bot zu deployen, werden folgende Packete benötigt:
 5. Server Starten
    In einem zweiten Terminal
    ```
-   python -m http.server`
+   python -m http.server
    ```
    In einem Browser http://localhost:8000/
 
