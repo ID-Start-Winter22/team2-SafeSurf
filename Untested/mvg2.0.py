@@ -9,6 +9,7 @@
 
 import requests
 import json
+import datetime
 
 MVG_STATION_URL = "https://www.mvg.de/api/fahrinfo/location/queryWeb"
 MVG_ROUTING_URL = "https://www.mvg.de/api/fahrinfo/routing"
@@ -39,15 +40,15 @@ def get_travel_time_for_stationIDs(station_a, station_b):
     as_dict = mvg_resp.json()
 
     travel_time = None
-    departure_time = None
     arrival_time = None
-    for connection in as_dict["connectionList"]: 
+    departure_time = None
+    for connection in as_dict["connectionList"]:
         departure_time = connection["departure"]
         arrival_time   = connection["arrival"] 
-        arrival = arrival_time / 1000.0 / 60.0 / 60.0 / 24 
-        departure = departure_time / 1000.0 / 60.0 / 60.0 / 24 
+        arrival = datetime.datetime.utcfromtimestamp((arrival_time + 3600000 ) / 1000).strftime('%H:%M')
+        departure = datetime.datetime.utcfromtimestamp((departure_time + 3600000) / 1000).strftime('%H:%M')
         delta_time_ms = arrival_time - departure_time
-        travel_time   = (delta_time_ms / 1000.0) / 60.0
+        travel_time  = (delta_time_ms / 1000.0) / 60.0
         break
 
     return travel_time, departure, arrival
@@ -63,7 +64,7 @@ def handle_route(start, destination):
     
     travel_time = get_travel_time_for_stationIDs(from_station["id"], to_station["id"])
     if travel_time:
-        print("Time needed:", travel_time, "min")
+        print("Time needed:", round(travel_time[0]), "min", "\n" "Abfahrt:", travel_time[1], "\n" "Ankunft:", travel_time[2], travel_time[3])
     else:
         return "Could not calculate travel-time for this pair of stations!"
 
