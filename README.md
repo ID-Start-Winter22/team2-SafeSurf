@@ -1,6 +1,6 @@
 <div align="center">
 <a href="https://github.com/ID-Start-Winter22/team2-banifli">
-<img src="http://banifli.de/images/bannerneu-min.jpg" alt="Logo" width="100%" height="auto">
+<img src="http://banifli.de/images/bannerneu.jpg" alt="Logo" width="100%" height="auto">
 </a>
 
 <h3 align="center">SafeSurf Chatbot</h3>
@@ -31,7 +31,7 @@ Dein Begleiter für einen sicheren Internetumgang.
 </ol>
 </details>
 
-<img src="https://wiesty.de/images/uploads/exampleimages.png" alt="example chatbot images" width="100%" height="auto">
+
 
 
 ## Über
