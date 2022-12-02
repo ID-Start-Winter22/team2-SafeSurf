@@ -38,7 +38,7 @@ Dein Begleiter für einen sicheren Internetumgang.
 Wir haben den Bot für Menschen entwickelt, die ihren sicheren Umgang in der digitalen Welt auf bekannte Schwachstellen Prüfen und verbessern wollen. 🌐 Der Bot führt gemeinsam mit dem User eine Checkliste 📝 durch und gibt diesem am Ende einen Score und Verbesserungsvorschläge. 🔒
 
 
-### Vorraussetzungen
+## Vorraussetzungen
 
 Um den Bot zu deployen, werden folgende Packete benötigt:
 
@@ -53,7 +53,7 @@ Um den Bot zu deployen, werden folgende Packete benötigt:
   Python Version 3.9.13
   ```
 
-### Installation
+## Installation
 
 1. Clone the repo
 
