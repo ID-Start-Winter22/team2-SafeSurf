@@ -19,17 +19,10 @@ Dein Begleiter für einen sicheren Internetumgang.
 <summary>Inhaltsverzeichnis</summary>
 <ol>
 <li>
-<a href="#über-das-projekt">Über das Projekt</a>
-<ul>
-<li><a href="#geschrieben-mit">Entwickelt mit</a></li>
-</ul>
+<a href="#über">Über das Projekt</a>
 </li>
 <li>
-<a href="#erstmalige-installation">Erstmalige Installation</a>
-<ul>
-<li><a href="#voraussetzungen">Voraussetzungen</a></li>
-<li><a href="#installation">Installation</a></li>
-</ul>
+<a href="#installation">Installation</a>
 </li>
 <li><a href="#nutzung">Nutzung</a></li>
 <li><a href="#roadmap">Roadmap</a></li>
@@ -39,6 +32,10 @@ Dein Begleiter für einen sicheren Internetumgang.
 </details>
 
 <img src="https://wiesty.de/images/uploads/exampleimages.png" alt="example chatbot images" width="100%" height="auto">
+
+
+### Über
+
 
 ### Vorraussetzungen
 
@@ -69,13 +66,7 @@ Um den Bot zu deployen, werden folgende Packete benötigt:
    pip install requests
    pip install json
    ```
-3. API Key von openweather einetzen in Line 16 `action.py`
-
-   ```
-   api_key = "API KEY eingeben"
-   ```
-   
-4. Rasa
+3. Rasa starten
    
    ```
    conda activate rasaenv
