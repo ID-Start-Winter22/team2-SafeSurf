@@ -34,7 +34,8 @@ Dein Begleiter für einen sicheren Internetumgang.
 <img src="https://wiesty.de/images/uploads/exampleimages.png" alt="example chatbot images" width="100%" height="auto">
 
 
-### Über
+## Über
+Wir haben den Bot für Menschen entwickelt, die ihren sicheren Umgang in der digitalen Welt auf bekannte Schwachstellen Prüfen und verbessern wollen. Der Bot führt gemeinsam mit dem User eine Checkliste durch und gibt diesem am Ende einen Score und Verbesserungsvorschläge. 
 
 
 ### Vorraussetzungen
@@ -125,7 +126,7 @@ Project Link: <https://github.com/ID-Start-Winter22/team2-banifli/>
 
 * [gsocher](https://github.com/gsocher)
 * [michaeleggers](https://github.com/michaeleggers)
-* [mvg-api by leftshift](https://github.com/leftshift/python_mvg_api)
+* [haveIbeenPwnd](https://haveibeenpwned.com/)
 
 <p align="right">(<a href="#über-das-projekt">Zurück nach oben</a>)</p>
  
