@@ -31,7 +31,7 @@ Dein Begleiter für einen sicheren Internetumgang.
 </ol>
 </details>
 
-<img src="https://wiesty.de/images/uploads/exampleimages.png" alt="example chatbot images" width="100%" height="auto">
+
 
 
 ## Über
