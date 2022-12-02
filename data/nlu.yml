@@ -5,6 +5,8 @@ nlu:
   examples: |
     - hey
     - hello
+    - Hallo
+    - Hi
     - hi
     - hello there
     - good morning
@@ -59,47 +61,25 @@ nlu:
     - nein
     - nicht wirklich
 
-- intent: mood_great
+- intent: mainmenu
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-    - gut
-    - wunderbar
-    - perfekt
-    - großartig
-    - sehr gut
+    - Hauptmenü
+    - Hauptmenu
+    - Menü
+    - Menu
+    - Start
 
-- intent: mood_unhappy
+- intent: danke
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-    - schlecht
-    - sehr schlecht
-    - nicht gut
+    - Das hat mir geholfen
+    - Vielen Dank
+    - Dankeschön
+    - thx
+    - danke
+    - Herzlichen Dank
+    - Thanks
+    - Thank you
+
 
 - intent: bot_challenge
   examples: |
@@ -108,22 +88,70 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
     - bist du ein Bot?
+    - Bist du ein Computer?
+    - Bist du ein Mensch?
+    - Spreche ich mit Banifli?
+    - Spreche ich mit SafeSurf?
 
-- intent: inquire_weather
-  examples: |
-    - Wie ist das Wetter in [München](place)?
-    - Wie ist das Wetter in [Berlin](place)?
-- lookup: place
-  examples: |
-    - München
-    - Berlin
+# - intent: mood_great
+#   examples: |
+#     - perfect
+#     - great
+#     - amazing
+#     - feeling like a king
+#     - wonderful
+#     - I am feeling very good
+#     - I am great
+#     - I am amazing
+#     - I am going to save the world
+#     - super stoked
+#     - extremely good
+#     - so so perfect
+#     - so good
+#     - so perfect
+#     - gut
+#     - wunderbar
+#     - perfekt
+#     - großartig
+#     - sehr gut
 
-- intent: inquire_joke
-  examples: |
-    - Bring mich zum lachen
-    - Erzähle mir einen Witz
+# - intent: mood_unhappy
+#   examples: |
+#     - my day was horrible
+#     - I am sad
+#     - I don't feel very well
+#     - I am disappointed
+#     - super sad
+#     - I'm so sad
+#     - sad
+#     - very sad
+#     - unhappy
+#     - not good
+#     - not very good
+#     - extremly sad
+#     - so saad
+#     - so sad
+#     - schlecht
+#     - sehr schlecht
+#     - nicht gut
 
-- intent: inquire_quote
-  examples: |
-    - Erzähle mir eine quote
-    - Erzähle mir einen Spruch
+
+# - intent: inquire_weather
+#   examples: |
+#     - Wie ist das Wetter in [München](place)?
+#     - Wie ist das Wetter in [Berlin](place)?
+
+# - lookup: place
+#   examples: |
+#     - München
+#     - Berlin
+
+# - intent: inquire_joke
+#   examples: |
+#     - Bring mich zum lachen
+#     - Erzähle mir einen Witz
+
+# - intent: inquire_quote
+#   examples: |
+#     - Erzähle mir eine quote
+#     - Erzähle mir einen Spruch

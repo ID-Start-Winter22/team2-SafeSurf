@@ -3,10 +3,10 @@
 <img src="https://wiesty.de/images/uploads/banner.png" alt="Logo" width="100%" height="auto">
 </a>
 
-<h3 align="center">Banifli Chatbot</h3>
+<h3 align="center">SafeSurf Chatbot</h3>
 
 <p align="center">
-Dein alltäglicher Studienbegleitung
+Dein Begleiter für einen sicheren Internetumgang.
 <br />
 <a href="https://github.com/ID-Start-Winter22/team2-banifli/wiki"><strong>Erforsche das Wiki »</strong></a>
 <br />
@@ -66,7 +66,6 @@ Um den Bot zu deployen, werden folgende Packete benötigt:
 2. Install pip packages
 
    ```
-   pip install mvg-api
    pip install requests
    pip install json
    ```

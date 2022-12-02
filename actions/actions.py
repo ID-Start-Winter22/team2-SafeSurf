@@ -4,16 +4,29 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
+
+
+class MainMenu(Action):
+    def name(self) -> Text:
+        return "action_home_menu"
+    def run(self, dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
+        buttons = [{"title": "Checkliste durchführen 📝", "payload": "Checkliste"}, {"title": "Zurück zum Hauptmenü 🏠", "payload": "Hallo"}]
+        dispatcher.utter_button_message("Hallo! 👋🏻, Ich bin SafeSurf 🔒. \n Gemeinsam prüfen wir deine Sicherheit im Internet. 🌐", buttons)
+        return[]
+
+
+"""
 class ActionTellWeather(Action):
 
     def name(self) -> Text:
         return "action_tell_weather"
-
-    def run(self, dispatcher: CollectingDispatcher,
+     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         city_name = next(tracker.get_latest_entity_values("place"), None)
-        api_key = "0ad3ff8e75c082c6fc193348b16958b1"
+        api_key = "XYZ"
         base_url = "http://api.openweathermap.org/data/2.5/weather?"
         complete_url = base_url + "appid=" + api_key + "&q=" + city_name + "&units=metric" + "&lang=de"
         response = requests.get(complete_url)
@@ -50,3 +63,4 @@ class quote(Action):
         output = random.choice(qod)
         dispatcher.utter_message("Okay, hier ist ein Spruch für dich.\n" + output["text"] + " Author: " + output["author"])
         return[]
+ """

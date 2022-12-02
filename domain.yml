@@ -9,6 +9,8 @@ intents:
   - mood_unhappy
   - bot_challenge
   - inquire_weather
+  - mainmenu
+  - danke
 
 entities: 
   - place
@@ -24,21 +26,21 @@ responses:
   utter_greet:
   - text: "Hey! Wie geht's dir?"
 
-  utter_cheer_up:
-  - text: "Hier etwas um dich aufzumuntern:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_did_help_user:
+  - text: "Schön, dass ich helfen konnte."
+    image: "https://media2.giphy.com/media/wtgpiXTZKOyTS/giphy.gif?cid=ecf05e47e35zn3sdy3w1hfjnjqzs7ne4jildd8d2c09xo4e0&rid=giphy.gif&ct=s"
 
   utter_did_that_help:
-  - text: "Hat dir das geholfen?"
+  - text: "Hat Dir das geholfen?"
 
   utter_happy:
   - text: "Sehr schön, weiter geht's!"
 
   utter_goodbye:
-  - text: "Tschüs"
+  - text: "Tschüss"
 
   utter_iamabot:
-  - text: "Ich bin Banifli, ihr Studentenhelfer. Das sollten sie doch wissen."
+  - text: "Ich bin SafeSurf. Das solltest Du doch wissen."
 
 session_config:
   session_expiration_time: 60
@@ -48,3 +50,4 @@ actions:
   - action_tell_weather
   - action_tell_joke
   - action_tell_quote
+  - action_home_menu

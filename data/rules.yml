@@ -2,27 +2,47 @@ version: "3.1"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: Ciao
   steps:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Hauptmenü
+  steps:
+  - intent: mainmenu
+  - action: action_home_menu
+
+- rule: danke
+  steps:
+  - intent: danke
+  - action: utter_did_help_user
+
+- rule: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: bist du ein bot
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- rule: Tell the weather
-  steps: 
-  - intent: inquire_weather
-  - action: action_tell_weather
+# - rule: Say hello
+#   steps:
+#   - intent: greet
+#   - action: action_home_menu
 
-- rule: Tell a joke
-  steps:
-  - intent: inquire_joke
-  - action: action_tell_joke
+# - rule: Tell the weather
+#   steps: 
+#   - intent: inquire_weather
+#   - action: action_tell_weather
 
-- rule: Tell a quote
-  steps:
-  - intent: inquire_quote
-  - action: action_tell_quote
+# - rule: Tell a joke
+#   steps:
+#   - intent: inquire_joke
+#   - action: action_tell_joke
+
+# - rule: Tell a quote
+#   steps:
+#   - intent: inquire_quote
+#   - action: action_tell_quote
