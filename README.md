@@ -35,7 +35,7 @@ Dein Begleiter für einen sicheren Internetumgang.
 
 
 ## Über
-Wir haben den Bot für Menschen entwickelt, die ihren sicheren Umgang in der digitalen Welt auf bekannte Schwachstellen Prüfen und verbessern wollen. Der Bot führt gemeinsam mit dem User eine Checkliste durch und gibt diesem am Ende einen Score und Verbesserungsvorschläge. 
+Wir haben den Bot für Menschen entwickelt, die ihren sicheren Umgang in der digitalen Welt auf bekannte Schwachstellen Prüfen und verbessern wollen. 🌐 Der Bot führt gemeinsam mit dem User eine Checkliste 📝 durch und gibt diesem am Ende einen Score und Verbesserungsvorschläge. 🔒
 
 
 ### Vorraussetzungen
