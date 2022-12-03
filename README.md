@@ -66,6 +66,7 @@ Um den Bot zu deployen, werden folgende Packete benötigt:
    ```
    pip install requests
    pip install json
+   pip install hibpwned
    ```
 3. Rasa starten
    
