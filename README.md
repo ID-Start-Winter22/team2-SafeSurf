@@ -58,7 +58,7 @@ Um den Bot zu deployen, werden folgende Packete benötigt:
 1. Clone the repo
 
    ```
-   git clone https://github.com/ID-Start-Winter22/team2-banifli.git
+   git clone https://github.com/ID-Start-Winter22/team2-SafeSurf.git
    cd team2-banifli
    ```
 2. Install pip packages
