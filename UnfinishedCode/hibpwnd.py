@@ -1,6 +1,6 @@
 import hibpwned
 
-my_app = hibpwned.Pwned("wiest@hm.edu", "My_App", "ff4e3bc18aef4d2b95949c3ff61a13ad")
+my_app = hibpwned.Pwned("wiest@hm.edu", "My_App", "apikey")
 
 my_breaches = my_app.search_all_breaches()
 breaches = my_app.all_breaches()
