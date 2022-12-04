@@ -11,11 +11,13 @@ intents:
   - inquire_weather
   - mainmenu
   - danke
+  - checkmymail
+  - mailinput
 
 entities: 
-  - place
+  - mail
 slots:
-  location:
+  mail:
     type: text
     influence_conversation: true
     mappings:
@@ -39,6 +41,9 @@ responses:
   utter_goodbye:
   - text: "Tschüss"
 
+  utter_ask_mail:
+  - text: "Wie lautet deine Mail Adresse?"
+
   utter_iamabot:
   - text: "Ich bin SafeSurf. Das solltest Du doch wissen."
 
@@ -51,3 +56,4 @@ actions:
   - action_tell_joke
   - action_tell_quote
   - action_home_menu
+  - action_check_account

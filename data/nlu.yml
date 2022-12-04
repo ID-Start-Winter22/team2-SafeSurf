@@ -83,15 +83,34 @@ nlu:
 
 - intent: bot_challenge
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-    - bist du ein Bot?
-    - Bist du ein Computer?
+    - are you a bot
+    - are you a human
+    - am I talking to a bot
+    - am I talking to a human
+    - bist du ein Bot
+    - Bist du ein Computer
     - Bist du ein Mensch?
-    - Spreche ich mit Banifli?
-    - Spreche ich mit SafeSurf?
+    - Spreche ich mit Banifli
+    - Spreche ich mit SafeSurf
+
+
+- intent: checkmymail
+  examples: |
+    - Wurde ich gehackt
+    - Accounts überprüfen
+    - Email Check
+    - Check meine Email
+    - Mail Check
+    - gehackt
+    - Mail prüfen
+    - Account überprüfen
+
+- intent: mailinput
+  examples: |
+    - @
+    - .de
+    - .com
+    - .net
 
 # - intent: mood_great
 #   examples: |

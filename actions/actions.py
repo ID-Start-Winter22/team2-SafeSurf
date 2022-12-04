@@ -17,6 +17,19 @@ class MainMenu(Action):
         return[]
 
 
+class CheckAccount(Action):
+    def name(self) -> Text:
+        return "action_check_account"
+    def run(self, dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
+        antwort = tracker.latest_message.get('text')
+        dispatcher.utter_message(f"Deine Mailadresse ist: {antwort}")
+        return[]
+
+
+
+
 """
 class ActionTellWeather(Action):
 

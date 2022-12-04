@@ -1,5 +1,15 @@
 version: "3.1"
 
+stories:
+
+- story: Check Hacked accounts
+  steps:
+  - intent: checkmymail
+  - action: utter_ask_mail
+  - intent: mailinput
+  - action: action_check_account
+
+
 # - story: sad path 1
 #   steps:
 #   - intent: greet
