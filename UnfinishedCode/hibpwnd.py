@@ -1,16 +1,21 @@
-# -------------------
-# | plasticuproject | 
-# |    hibpwnd      |   
-# -------------------
+import json
+import requests
+import os                                                                                                                                                                                                          
+from dotenv import load_dotenv, find_dotenv
+from pathlib import Path
+load_dotenv()
 
-import hibpwned
 
-my_app = hibpwned.Pwned("wiest@hm.edu", "My_App", "apikey") #add apikey locally not in the code here directly!!!
+hibp_api_key = os.getenv("hibp_api_key") #PLEASE LOOK AT THE DOCS TO SET AN API KEY
+url = "https://haveibeenpwned.com/api/v3/breachedaccount/basti@exotix.eu"
+payload={}
+headers = {
+  'hibp-api-key': str(hibp_api_key),
+  'format': 'application/json',
+  'timeout': '2.5',
+  'HIBP': str(hibp_api_key),
+}
 
-my_breaches = my_app.search_all_breaches()
-breaches = my_app.all_breaches()
-adobe = my_app.single_breach("adobe")
-data = my_app.data_classes()
-my_pastes = my_app.search_pastes()
-password = my_app.search_password("BadPassword")
-my_hashes = my_app.search_hashes("21BD1")
+response = requests.request("GET", url, headers=headers, data=payload)
+
+print(response.text)
