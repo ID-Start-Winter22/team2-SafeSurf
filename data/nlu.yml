@@ -94,28 +94,15 @@ nlu:
     - Spreche ich mit SafeSurf
 
 
-- intent: checkmymail
+- intent: check_mail
   examples: |
-    - Wurde ich gehackt
     - Accounts überprüfen
     - Email Check
     - Check meine Email
     - Mail Check
-    - gehackt
     - Mail prüfen
     - Account überprüfen
 
-- intent: mailinput
-  examples: |
-    - "[a-zA-Z+-]+@[a-zA-Z-]+\.[a-zA-Z-.]+"
-    - "[a-z0-9_.+-]+@[A-Z0-9-]+\.[A-Z0-9-.]+"
-    - "[0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z-.]+"
-    - "[a-zA-Z0-9_.+-]+@[A-Z0-9-]+\.[a-zA-Z0-9-.]+"
-    - "[a-z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+"
-    - "[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+"
-    - "[a-zA-Z_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z-.]+"
-    - "[a-zA-Z0-9_.+-]+@[a-z0-9-]+\.[a-zA-Z0-9-.]+"
-    - "[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+"
 
 
 # - intent: mood_great

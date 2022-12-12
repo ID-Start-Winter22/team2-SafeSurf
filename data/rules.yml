@@ -7,10 +7,11 @@ rules:
   - intent: mainmenu
   - action: action_home_menu
 
-- rule: Check Mail
+- rule: Mail Check
   steps:
-  - intent: mailinput
+  - intent: check_mail
   - action: action_check_account
+
 
 - rule: danke
   steps:

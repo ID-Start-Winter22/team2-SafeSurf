@@ -11,18 +11,7 @@ intents:
   - inquire_weather
   - mainmenu
   - danke
-  - checkmymail
-  - mailinput
-
-entities: 
-  - mail
-slots:
-  mail:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: place
+  - check_mail
 
 responses:
   utter_greet:

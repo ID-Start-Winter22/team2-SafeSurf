@@ -1,10 +1,13 @@
 import requests, json, random
 from typing import Any, Text, Dict, List
-
+from rasa_sdk import Tracker, FormValidationAction, Action
+from rasa_sdk.events import EventType
+from rasa_sdk.types import DomainDict
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+import re
 
-
+ALLOWED_ANSWERS = ["Ja", "Nein"]
 
 class MainMenu(Action):
     def name(self) -> Text:
@@ -24,7 +27,12 @@ class CheckAccount(Action):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
         antwort = tracker.latest_message.get('text')
-        dispatcher.utter_message(f"Deine Mailadresse ist: {antwort}")
+        email_regex = r'\w+@\w+\.\w+'
+        match = re.search(email_regex, antwort)
+        if match:
+            dispatcher.utter_message(f"Mailadresse ist: {match.group()}")
+        else:
+            dispatcher.utter_message("Mail nicht gefunden")
         return[]
 
 
