@@ -6,7 +6,7 @@ from pathlib import Path
 load_dotenv()
 
 
-hibp_api_key = os.getenv("hibp_api_key") #PLEASE LOOK AT THE DOCS TO SET AN API KEY
+hibp_api_key = os.getenv("hibp_api_key")
 url = "https://haveibeenpwned.com/api/v3/breachedaccount/basti@exotix.eu"
 payload={}
 headers = {

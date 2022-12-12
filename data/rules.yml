@@ -2,15 +2,15 @@ version: "3.1"
 
 rules:
 
-- rule: Ciao
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
-
 - rule: Hauptmenü
   steps:
   - intent: mainmenu
   - action: action_home_menu
+
+- rule: Check Mail
+  steps:
+  - intent: mailinput
+  - action: action_check_account
 
 - rule: danke
   steps:
