@@ -12,7 +12,6 @@ rules:
   - intent: check_mail
   - action: action_check_account
 
-
 - rule: danke
   steps:
   - intent: danke
@@ -27,7 +26,6 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
-
 
 
 # - rule: Say hello
