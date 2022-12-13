@@ -27,6 +27,15 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
+- rule: next Step
+  steps:
+  - intent: nextstep
+  - action: nextchecklist
+
+- rule: reset Checklist
+  steps:
+  - intent: resetcl
+  - action: resetchecklist
 
 # - rule: Say hello
 #   steps:

@@ -6,8 +6,11 @@ from rasa_sdk.types import DomainDict
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import re
+import enum
 
 ALLOWED_ANSWERS = ["Ja", "Nein"]
+Score = 0
+CurrentCheckListIndex = 0
 
 class MainMenu(Action):
     def name(self) -> Text:
@@ -15,9 +18,43 @@ class MainMenu(Action):
     def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
-        buttons = [{"title": "Checkliste durchführen 📝", "payload": "Checkliste"}, {"title": "Zurück zum Hauptmenü 🏠", "payload": "Hallo"}]
+        buttons = [{"title": "Checkliste durchführen 📝", "payload": "Checkliste starten"}, {"title": "Zurück zum Hauptmenü 🏠", "payload": "Hallo"}]
         dispatcher.utter_button_message("Hallo! 👋🏻, Ich bin SafeSurf 🔒. \n Gemeinsam prüfen wir deine Sicherheit im Internet. 🌐", buttons)
         return[]
+
+
+class nextchecklist(Action):
+    def __init__(self):
+        self.CurrentCheckListIndex = 0
+
+    def name(self) -> Text:
+        return "nextchecklist"
+    def run(self, dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
+        if CurrentCheckListIndex == 0:
+            dispatcher.utter_message("Gehe nun zu Step1")
+            dispatcher.utter_message("Das war Step 1 weitermachen mit Nächster Schritt 2")
+            CurrentCheckListIndex += 1
+        elif CurrentCheckListIndex == 1:
+             dispatcher.utter_message("Das ist Step2")
+        elif CurrentCheckListIndex == 2:
+            dispatcher.utter_message("Das ist Step3")
+        elif CurrentCheckListIndex >= 29:
+            buttons = [{"title": "Checkliste zurücksetzen  📝", "payload": "ResetCL"}]
+            dispatcher.utter_button_message("Du hast die Checkliste abgearbeitet. Super! 🥳 \n Du kannst diese zurücksetzten mit 'ResetCL'", buttons)
+        else:
+            dispatcher.utter_message("fick dein vaddi")
+        return
+
+
+class resetchecklist(Action):
+    def name(self) -> Text:
+        return "resetchecklist"
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        CurrentCheckListIndex = 0
+        return CurrentCheckListIndex
+
 
 
 class CheckAccount(Action):

@@ -103,6 +103,15 @@ nlu:
     - Mail prüfen
     - Account überprüfen
 
+- intent: nextstep
+  examples: |
+    - Nächster Schritt
+    - Checkliste starten
+
+- intent: resetcl
+  examples: |
+    - ResetCL
+
 
 
 # - intent: mood_great

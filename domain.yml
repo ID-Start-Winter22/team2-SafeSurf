@@ -28,7 +28,7 @@ responses:
   - text: "Sehr schön, weiter geht's!"
 
   utter_goodbye:
-  - text: "Tschüss"
+  - text: "C u"
 
   utter_ask_mail:
   - text: "Wie lautet deine Mail Adresse?"
@@ -46,3 +46,5 @@ actions:
   - action_tell_quote
   - action_home_menu
   - action_check_account
+  - resetchecklist
+  - nextchecklist
