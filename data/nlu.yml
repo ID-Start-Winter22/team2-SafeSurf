@@ -106,11 +106,11 @@ nlu:
 - intent: nextstep
   examples: |
     - Nächster Schritt
-    - Checkliste starten
 
 - intent: resetcl
   examples: |
     - ResetCL
+    - Checkliste starten
 
 
 

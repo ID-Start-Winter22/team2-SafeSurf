@@ -13,6 +13,14 @@ intents:
   - danke
   - check_mail
 
+slots:
+  CCLI:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: custom
+
+
 responses:
   utter_greet:
   - text: "Hey! Wie geht's dir?"

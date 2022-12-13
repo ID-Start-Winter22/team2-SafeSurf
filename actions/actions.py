@@ -1,16 +1,13 @@
 import requests, json, random
 from typing import Any, Text, Dict, List
 from rasa_sdk import Tracker, FormValidationAction, Action
-from rasa_sdk.events import EventType
+from rasa_sdk.events import EventType, SlotSet
 from rasa_sdk.types import DomainDict
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import re
-import enum
-
 ALLOWED_ANSWERS = ["Ja", "Nein"]
 Score = 0
-CurrentCheckListIndex = 0
 
 class MainMenu(Action):
     def name(self) -> Text:
@@ -18,42 +15,46 @@ class MainMenu(Action):
     def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
+        CurrentCheckListIndex = 0
         buttons = [{"title": "Checkliste durchführen 📝", "payload": "Checkliste starten"}, {"title": "Zurück zum Hauptmenü 🏠", "payload": "Hallo"}]
         dispatcher.utter_button_message("Hallo! 👋🏻, Ich bin SafeSurf 🔒. \n Gemeinsam prüfen wir deine Sicherheit im Internet. 🌐", buttons)
-        return[]
+        return[SlotSet("CCLI", CurrentCheckListIndex)]
 
 
 class nextchecklist(Action):
-    def __init__(self):
-        self.CurrentCheckListIndex = 0
-
     def name(self) -> Text:
         return "nextchecklist"
     def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
-        if CurrentCheckListIndex == 0:
-            dispatcher.utter_message("Gehe nun zu Step1")
+        CurrentCheckListIndex = tracker.get_slot("CCLI")
+        if CurrentCheckListIndex == "CL0":
+            print(CurrentCheckListIndex)
             dispatcher.utter_message("Das war Step 1 weitermachen mit Nächster Schritt 2")
-            CurrentCheckListIndex += 1
-        elif CurrentCheckListIndex == 1:
-             dispatcher.utter_message("Das ist Step2")
-        elif CurrentCheckListIndex == 2:
+            return [SlotSet("CCLI", "CL1")]
+        elif CurrentCheckListIndex == "CL1":
+             dispatcher.utter_message(CurrentCheckListIndex)
+             dispatcher.utter_message("Step 2 weitermachen mit Nächster Schritt 3")
+             return [SlotSet("CCLI", "CL2")]
+        elif CurrentCheckListIndex == "CL2":
+            dispatcher.utter_message(CurrentCheckListIndex)
             dispatcher.utter_message("Das ist Step3")
-        elif CurrentCheckListIndex >= 29:
-            buttons = [{"title": "Checkliste zurücksetzen  📝", "payload": "ResetCL"}]
-            dispatcher.utter_button_message("Du hast die Checkliste abgearbeitet. Super! 🥳 \n Du kannst diese zurücksetzten mit 'ResetCL'", buttons)
+        # elif CurrentCheckListIndex >= 29:
+        #     buttons = [{"title": "Checkliste zurücksetzen  📝", "payload": "ResetCL"}]
+        #     dispatcher.utter_button_message("Du hast die Checkliste abgearbeitet. Super! 🥳 \n Du kannst diese zurücksetzten mit 'ResetCL'", buttons)
         else:
-            dispatcher.utter_message("test")
-        return
+            dispatcher.utter_message(f"Fehler CCLI: {CurrentCheckListIndex}")
+        return []
 
 
 class resetchecklist(Action):
     def name(self) -> Text:
         return "resetchecklist"
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        CurrentCheckListIndex = 0
-        return CurrentCheckListIndex
+        CurrentCheckListIndex = "CL0"
+        dispatcher.utter_message("Ich habe deinen Fortschritt der Liste gelöscht Starte nun erneut über das Hauptmenü.")
+        print(CurrentCheckListIndex)
+        return [SlotSet("CCLI", CurrentCheckListIndex)]
 
 
 
