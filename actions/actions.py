@@ -44,7 +44,7 @@ class nextchecklist(Action):
             buttons = [{"title": "Checkliste zurücksetzen  📝", "payload": "ResetCL"}]
             dispatcher.utter_button_message("Du hast die Checkliste abgearbeitet. Super! 🥳 \n Du kannst diese zurücksetzten mit 'ResetCL'", buttons)
         else:
-            dispatcher.utter_message("fick dein vaddi")
+            dispatcher.utter_message("test")
         return
 
 
