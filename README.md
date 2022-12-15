@@ -125,7 +125,7 @@ Project Link: <https://github.com/ID-Start-Winter22/team2-banifli/>
 
 ## Danksagungen
 
-* [gsocher](https://github.com/gsocher)
+* [gsocher](https://github.com/gsocher) & [TinaWeisser](https://github.com/TinaWeisser)
 * [michaeleggers](https://github.com/michaeleggers)
 * [haveIbeenPwnd](https://haveibeenpwned.com/)
 
