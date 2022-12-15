@@ -60,20 +60,21 @@ class mehrinfo(Action):
         return "mehr_info"
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         CurrentCheckListIndex = tracker.get_slot("CCLI")
-        if CurrentCheckListIndex == "CL0":
+        if CurrentCheckListIndex == "CL1":
             dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/")
-            return [SlotSet("CCLI", "CL1")]
-        elif CurrentCheckListIndex == "CL1":
-            dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
-            dispatcher.utter_message("https://banifli.de/datenschutz-einstellungen-im-browser/")
+            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
             return [SlotSet("CCLI", "CL1")]
         elif CurrentCheckListIndex == "CL2":
             dispatcher.utter_message("Mehr Infos findest du hier:")
             dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
             dispatcher.utter_message("https://banifli.de/datenschutz-einstellungen-im-browser/")
             return [SlotSet("CCLI", "CL2")]
+        elif CurrentCheckListIndex == "CL3":
+            dispatcher.utter_message("Mehr Infos findest du hier:")
+            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            dispatcher.utter_message("https://banifli.de/datenschutz-einstellungen-im-browser/")
+            return [SlotSet("CCLI", "CL3")]
         else:
             dispatcher.utter_message(f"Oh oh! Fehler: CCLI: {CurrentCheckListIndex}")
         return []
