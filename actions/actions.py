@@ -5,9 +5,13 @@ from rasa_sdk.events import EventType, SlotSet
 from rasa_sdk.types import DomainDict
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+import os                                                                                                                                                                                                          
+from dotenv import load_dotenv, find_dotenv
+from pathlib import Path
 import re
-ALLOWED_ANSWERS = ["Ja", "Nein"]
-Score = 0
+load_dotenv()
+hibp_api_key = os.getenv("hibp_api_key")
+
 
 class MainMenu(Action):
     def name(self) -> Text:
@@ -29,21 +33,49 @@ class nextchecklist(Action):
         domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
         CurrentCheckListIndex = tracker.get_slot("CCLI")
         if CurrentCheckListIndex == "CL0":
-            print(CurrentCheckListIndex)
-            dispatcher.utter_message("Das war Step 1 weitermachen mit Nächster Schritt 2")
+            dispatcher.utter_message("Okay, starten wir mit Passwörtern! 🔒 \nBei Passwortern gibt es wichtige Dinge zu beachten:")
+            dispatcher.utter_message("Deine Passwörter sollten aus Groß und Kleinbuchstaben bestehen sowie mindestens 8-16 Zeichen lang sein. ⚡ \n Es sollten Sonderzeichen im Passwort enthalten sein. (!,?,&) 🅰️ \n Es sollten unterschiedliche Passwörter benutzt werden. \n Es sollten keine persönlichen Daten enthalten sein. Zum Beispiel Geburtstage oder Namen 🔢")
+            buttons = [{"title": "Mehr Informationen 📥", "payload": "Mehr Info"}, {"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
             return [SlotSet("CCLI", "CL1")]
         elif CurrentCheckListIndex == "CL1":
-             dispatcher.utter_message(CurrentCheckListIndex)
-             dispatcher.utter_message("Step 2 weitermachen mit Nächster Schritt 3")
-             return [SlotSet("CCLI", "CL2")]
+            dispatcher.utter_message("Machen wir Weiter mit Webseiten! 🌍 \n Du solltest nicht Webseite besuchen, die du findest!")
+            dispatcher.utter_message("Besuche nur Webseiten mit SSL Verbindung (Grünes Schloss 🔒 neben der Link Leiste) \n Überprüfe regelmäßig deine Browsereinstellungen bezügl. Datenschutz 🌐 \n Achte bei Webseiten auf die geforderten Cookies im Cookie Banner. 🍪")
+            buttons = [{"title": "Mehr Informationen 📥", "payload": "Mehr Info"}, {"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
+            return [SlotSet("CCLI", "CL2")]
         elif CurrentCheckListIndex == "CL2":
-            dispatcher.utter_message(CurrentCheckListIndex)
-            dispatcher.utter_message("Das ist Step3")
-        # elif CurrentCheckListIndex >= 29:
-        #     buttons = [{"title": "Checkliste zurücksetzen  📝", "payload": "ResetCL"}]
-        #     dispatcher.utter_button_message("Du hast die Checkliste abgearbeitet. Super! 🥳 \n Du kannst diese zurücksetzten mit 'ResetCL'", buttons)
+            dispatcher.utter_message("Machen wir Weiter mit Webseiten! 🌍 \n Du solltest nicht Webseite besuchen, die du findest!")
+            dispatcher.utter_message("Besuche nur Webseiten mit SSL Verbindung (Grünes Schloss 🔒 neben der Link Leiste) \n Überprüfe regelmäßig deine Browsereinstellungen bezügl. Datenschutz 🌐 \n Achte bei Webseiten auf die geforderten Cookies im Cookie Banner. 🍪")
+            buttons = [{"title": "Mehr Informationen 📥", "payload": "Mehr Info"}, {"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
+            return [SlotSet("CCLI", "CL2")]
         else:
-            dispatcher.utter_message(f"Fehler CCLI: {CurrentCheckListIndex}")
+            dispatcher.utter_message(f"Oh oh! Fehler: CCLI: {CurrentCheckListIndex}")
+        return []
+
+
+class mehrinfo(Action):
+    def name(self) -> Text:
+        return "mehr_info"
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        CurrentCheckListIndex = tracker.get_slot("CCLI")
+        if CurrentCheckListIndex == "CL0":
+            dispatcher.utter_message("Mehr Infos findest du hier:")
+            dispatcher.utter_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/")
+            return [SlotSet("CCLI", "CL1")]
+        elif CurrentCheckListIndex == "CL1":
+            dispatcher.utter_message("Mehr Infos findest du hier:")
+            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            dispatcher.utter_message("https://banifli.de/datenschutz-einstellungen-im-browser/")
+            return [SlotSet("CCLI", "CL1")]
+        elif CurrentCheckListIndex == "CL2":
+            dispatcher.utter_message("Mehr Infos findest du hier:")
+            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            dispatcher.utter_message("https://banifli.de/datenschutz-einstellungen-im-browser/")
+            return [SlotSet("CCLI", "CL2")]
+        else:
+            dispatcher.utter_message(f"Oh oh! Fehler: CCLI: {CurrentCheckListIndex}")
         return []
 
 
@@ -53,7 +85,6 @@ class resetchecklist(Action):
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         CurrentCheckListIndex = "CL0"
         dispatcher.utter_message("Ich habe deinen Fortschritt der Liste gelöscht Starte nun erneut über das Hauptmenü.")
-        print(CurrentCheckListIndex)
         return [SlotSet("CCLI", CurrentCheckListIndex)]
 
 
@@ -65,61 +96,36 @@ class CheckAccount(Action):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
         antwort = tracker.latest_message.get('text')
-        email_regex = r'\w+@\w+\.\w+'
-        match = re.search(email_regex, antwort)
-        if match:
-            dispatcher.utter_message(f"Mailadresse ist: {match.group()}")
+        extract_email_pattern = r"\S+@\S+\.\S+"
+        valid_email_pattern = '[A-Za-z0-9]+[\.\-\_A-Za-z0-9]*[@]\w+[.]\w+'
+        matchList = re.findall(extract_email_pattern, antwort)
+        match = ''.join(matchList)
+        validList = re.findall(valid_email_pattern,match)
+        valid = ''.join(validList)
+        if valid == match:   
+            hibp_api_key = os.getenv("hibp_api_key")
+            url = "https://haveibeenpwned.com/api/v3/breachedaccount/" + match
+            payload={}
+            headers = {
+              'hibp-api-key': str(hibp_api_key),
+              'format': 'application/json',
+              'timeout': '2.5',
+              'HIBP': str(hibp_api_key),
+            }
+            
+            response = requests.request("GET", url, headers=headers, data=payload)
+            
+            string = response.text
+            # use regular expressions to match and replace only the "Name": part of the object keys
+            string = re.sub('"Name":', '', string)
+            string = string.replace('[', '')
+            string = string.replace(']', '')
+            string = string.replace('{', '')
+            string = string.replace('}', '')
+            dispatcher.utter_message(f"Oh nein! Du solltest deine Passwort, die du auf diesen Seiten/Apps benutzt ändern: " + string)
+
         else:
-            dispatcher.utter_message("Mail nicht gefunden")
+            dispatcher.utter_message("Sieht gut aus! Dein Account ist in keiner bekannten Datenliste vorhanden!")
+
         return[]
 
-
-
-
-"""
-class ActionTellWeather(Action):
-
-    def name(self) -> Text:
-        return "action_tell_weather"
-     def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        city_name = next(tracker.get_latest_entity_values("place"), None)
-        api_key = "XYZ"
-        base_url = "http://api.openweathermap.org/data/2.5/weather?"
-        complete_url = base_url + "appid=" + api_key + "&q=" + city_name + "&units=metric" + "&lang=de"
-        response = requests.get(complete_url)
-        x = response.json()["main"]
-        desc = response.json()["weather"]
-        current_temperature = x["temp"]
-        weather_description = desc[0]["description"]
-        dispatcher.utter_message(f"In {city_name} sind es " + str(current_temperature) + "°C. \nAktueller Wetterstatus: " + str(weather_description))
-        return []
-
-class Jokes(Action):
-    def name(self) -> Text:
-        return "action_tell_joke"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        url = "https://witzapi.de/api/joke"
-        response = requests.get(url)
-        jr = response.json()[0]
-        joke = jr["text"]
-        dispatcher.utter_message("Okay, hier ist ein Witz für dich. \n" + joke)
-        return []
-
-class quote(Action):
-    def name(self) -> Text:
-        return "action_tell_quote"
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:  
-        url = "https://type.fit/api/quotes/"
-        response = requests.get(url)
-        qod = response.json()[0:]
-        output = random.choice(qod)
-        dispatcher.utter_message("Okay, hier ist ein Spruch für dich.\n" + output["text"] + " Author: " + output["author"])
-        return[]
- """

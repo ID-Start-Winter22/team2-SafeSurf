@@ -112,7 +112,10 @@ nlu:
     - ResetCL
     - Checkliste starten
 
-
+- intent: mehrinfo
+  examples: |
+    - Mehr Info
+    - Mehr Informationen
 
 # - intent: mood_great
 #   examples: |

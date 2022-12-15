@@ -12,9 +12,17 @@ intents:
   - mainmenu
   - danke
   - check_mail
+  - nextstep
+  - resetctl
+  - mehrinfo
 
 slots:
   CCLI:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: custom
+  UserScore:
     type: any
     influence_conversation: false
     mappings:
@@ -56,3 +64,4 @@ actions:
   - action_check_account
   - resetchecklist
   - nextchecklist
+  - mehr_info

@@ -37,6 +37,12 @@ rules:
   - intent: resetcl
   - action: resetchecklist
 
+- rule: mehr_info
+  steps:
+  - intent: mehrinfo
+  - action: mehr_info
+  
+
 # - rule: Say hello
 #   steps:
 #   - intent: greet
