@@ -17,10 +17,10 @@ rules:
   - intent: danke
   - action: utter_did_help_user
 
-- rule: greet
-  steps:
-  - intent: greet
-  - action: utter_greet
+# - rule: greet
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
 
 - rule: bist du ein bot
   steps:

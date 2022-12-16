@@ -1,26 +1,26 @@
 version: "3.1"
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - Hallo
-    - Hi
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-    - hallo
-    - guten Tag
-    - Servus
+# - intent: greet
+#   examples: |
+#     - hey
+#     - hello
+#     - Hallo
+#     - Hi
+#     - hi
+#     - hello there
+#     - good morning
+#     - good evening
+#     - moin
+#     - hey there
+#     - let's go
+#     - hey dude
+#     - goodmorning
+#     - goodevening
+#     - good afternoon
+#     - hallo
+#     - guten Tag
+#     - Servus
 
 - intent: goodbye
   examples: |
@@ -68,6 +68,24 @@ nlu:
     - Menü
     - Menu
     - Start
+    - hey
+    - hello
+    - Hallo
+    - Hi
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hallo
+    - guten Tag
+    - Servus
 
 - intent: danke
   examples: |
@@ -106,11 +124,13 @@ nlu:
 - intent: nextstep
   examples: |
     - Nächster Schritt
+    - Weitermachen
+    - Checkliste starten
 
 - intent: resetcl
   examples: |
     - ResetCL
-    - Checkliste starten
+
 
 - intent: mehrinfo
   examples: |

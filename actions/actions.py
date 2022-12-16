@@ -19,7 +19,7 @@ class MainMenu(Action):
     def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
-        CurrentCheckListIndex = 0
+        CurrentCheckListIndex = "CL0"
         buttons = [{"title": "Checkliste durchführen 📝", "payload": "Checkliste starten"}, {"title": "Zurück zum Hauptmenü 🏠", "payload": "Hallo"}]
         dispatcher.utter_button_message("Hallo! 👋🏻, Ich bin SafeSurf 🔒. \n Gemeinsam prüfen wir deine Sicherheit im Internet. 🌐", buttons)
         return[SlotSet("CCLI", CurrentCheckListIndex)]
@@ -125,8 +125,10 @@ class CheckAccount(Action):
             string = string.replace(']', '')
             string = string.replace('{', '')
             string = string.replace('}', '')
-            dispatcher.utter_message(f"Oh nein! Du solltest deine Passwort, die du auf diesen Seiten/Apps benutzt ändern: " + string)
-
+            if len(string) < 2:
+                dispatcher.utter_message("Sieht gut aus! Dein Account ist in keiner bekannten Datenliste vorhanden!")
+            elif len(string) > 2:
+                dispatcher.utter_message(f"Oh nein! Du solltest deine Passwort, die du auf diesen Seiten/Apps benutzt ändern: " + string)
         else:
             dispatcher.utter_message("Sieht gut aus! Dein Account ist in keiner bekannten Datenliste vorhanden!")
 
