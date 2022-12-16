@@ -1,6 +1,6 @@
 <div align="center">
 <a href="https://github.com/ID-Start-Winter22/team2-banifli">
-<img src="https://banifli.de/images/bannerneu.jpg" alt="Logo" width="100%" height="auto">
+<img src="https://banifli.de/images/bannerneu.jpg" alt="Readme Banner" width="100%" height="auto">
 </a>
 
 <h3 align="center">SafeSurf Chatbot</h3>
