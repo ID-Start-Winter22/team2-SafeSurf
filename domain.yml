@@ -65,3 +65,4 @@ actions:
   - resetchecklist
   - nextchecklist
   - mehr_info
+  - pwchecker

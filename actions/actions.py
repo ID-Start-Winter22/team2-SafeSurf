@@ -263,30 +263,39 @@ class pwchecker(Action):
     def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
-
-        pwue = tracker.get_intent_of_latest_message('text')
+        pwue = tracker.latest_message.get('text')
         nlulist = ["Passwortcheck ", "PasswortCheck ", "pwcheck ", "Passwort ", "Passwort überprüfen "] # COPY DATA FROM NLU
         for a in nlulist:
             if a in pwue:
-                password =  pwue.replace(a, "")
+                password = pwue.replace(a, "")
+
         length_error = len(password) < 8
         digit_error = re.search(r"\d", password) is None
         uppercase_error = re.search(r"[A-Z]", password) is None
         lowercase_error = re.search(r"[a-z]", password) is None
         symbol_error = re.search(r"[ !#$%&'()*+,-./[\\\]^_`{|}~"+r'"]', password) is None
         password_ok = not ( length_error or digit_error or uppercase_error or lowercase_error or symbol_error )
-
         if password_ok == True:
-            dispatcher.utter_message("Passwort ist okay")
+            dispatcher.utter_message("Passwort ist okay!")
         else:
-            dispatcher.utter_message("Dein Passwort ist nicht sicher.")
+            dispatcher.utter_message("Dein Passwort ist nicht sicher. (+) = gut / (-) = schlecht")
             if length_error == True:
-                dispatcher.utter_message("Dein Passwort ist zu kurz")
+                dispatcher.utter_message("Dein Passwort ist zu kurz (-)")
+            if length_error == False:
+                dispatcher.utter_message("Dein Passwort ist zu lang genug! (+)")
             if digit_error == True:
-                dispatcher.utter_message("Dein Passwort enthält keine Zahlen")
+                dispatcher.utter_message("Dein Passwort enthält keine Zahlen (-)")
+            if digit_error == False:
+                dispatcher.utter_message("Dein Passwort enthält Zahlen! (+)")
             if uppercase_error == True:
-                dispatcher.utter_message("Dein Passwort enthält keine Großbuchstaben")
+                dispatcher.utter_message("Dein Passwort enthält keine Großbuchstaben (-)")
+            if uppercase_error == False:
+                dispatcher.utter_message("Dein Passwort enthält Großbuchstaben (+)")
             if lowercase_error == True:
-                dispatcher.utter_message("Dein Passwort enthält keine Kleinbuchstaben")
+                dispatcher.utter_message("Dein Passwort enthält keine Kleinbuchstaben (-)")
+            if lowercase_error == False:
+                dispatcher.utter_message("Dein Passwort enthält Kleinbuchstaben (+)")
             if symbol_error == True:
-                dispatcher.utter_message("Dein Passwort hat keine Sonderzeichen.")
+                dispatcher.utter_message("Dein Passwort hat keine Sonderzeichen. (-)")
+            if symbol_error == False:
+                dispatcher.utter_message("Dein Passwort hat Sonderzeichen. (+)")
