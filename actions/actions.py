@@ -34,7 +34,7 @@ class nextchecklist(Action):
         CurrentCheckListIndex = tracker.get_slot("CCLI")
         if CurrentCheckListIndex == "CL0":
             dispatcher.utter_message("Okay, starten wir mit Passwörtern! 🔒 \nBei Passwortern gibt es wichtige Dinge zu beachten:")
-            dispatcher.utter_message("Deine Passwörter sollten aus Groß und Kleinbuchstaben bestehen, sowie mindestens 8-16 Zeichen lang sein. ⚡ \n Es sollten Sonderzeichen im Passwort enthalten sein. (!,?,&) 🅰️ \n Es sollten unterschiedliche Passwörter benutzt werden. \n Es sollten keine persönlichen Daten enthalten sein. Zum Beispiel Geburtstage oder Namen 🔢")
+            dispatcher.utter_message("Deine Passwörter sollten aus Groß und Kleinbuchstaben bestehen, sowie mindestens 8-16 Zeichen lang sein. ⚡ \n Es sollten Sonderzeichen im Passwort enthalten sein. (!,?,&) 🅰️ \n Es sollten unterschiedliche Passwörter benutzt werden. \n Es sollten keine persönlichen Daten enthalten sein. Zum Beispiel Geburtstage oder Namen 🔢 \n Du kannst auch dein Passwort automatisch überprüfen lassen mit: Passwortcheck Passwort123")
             buttons = [{"title": "Mehr Informationen 📥", "payload": "Mehr Info"}, {"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
             dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
             return [SlotSet("CCLI", "CL1")]
@@ -52,6 +52,12 @@ class nextchecklist(Action):
             buttons = [{"title": "Mehr Informationen 📥", "payload": "Mehr Info"}, {"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
             dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
             return [SlotSet("CCLI", "CL3")]
+        elif CurrentCheckListIndex == "CL4":
+            dispatcher.utter_message("Machen wir Weiter mit Webseiten! 🌍 \n Du solltest nicht Webseite besuchen, die du findest!")
+            dispatcher.utter_message("Besuche nur Webseiten mit SSL Verbindung (Grünes Schloss 🔒 neben der Link Leiste) \n Überprüfe regelmäßig deine Browsereinstellungen bezügl. Datenschutz 🌐 \n Achte bei Webseiten auf die geforderten Cookies im Cookie Banner. 🍪")
+            buttons = [{"title": "Mehr Informationen 📥", "payload": "Mehr Info"}, {"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
+            return [SlotSet("CCLI", "CL4")]
         else:
             dispatcher.utter_message(f"Oh oh! Fehler: CCLI: {CurrentCheckListIndex}")
         return []
@@ -70,15 +76,131 @@ class mehrinfo(Action):
         elif CurrentCheckListIndex == "CL2":
             dispatcher.utter_message("Mehr Infos findest du hier:")
             dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
-            dispatcher.utter_message("https://banifli.de/datenschutz-einstellungen-im-browser/")
+            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
             return [SlotSet("CCLI", "CL2")]
         elif CurrentCheckListIndex == "CL3":
             dispatcher.utter_message("Mehr Infos findest du hier:")
             dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
-            dispatcher.utter_message("https://banifli.de/datenschutz-einstellungen-im-browser/")
+            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
             return [SlotSet("CCLI", "CL3")]
+        elif CurrentCheckListIndex == "CL4":
+            dispatcher.utter_message("Mehr Infos findest du hier:")
+            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            return [SlotSet("CCLI", "CL4")]
+        elif CurrentCheckListIndex == "CL5":
+            dispatcher.utter_message("Mehr Infos findest du hier:")
+            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            return [SlotSet("CCLI", "CL5")]
+        elif CurrentCheckListIndex == "CL6":
+            dispatcher.utter_message("Mehr Infos findest du hier:")
+            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            return [SlotSet("CCLI", "CL6")]
+        elif CurrentCheckListIndex == "CL7":
+            dispatcher.utter_message("Mehr Infos findest du hier:")
+            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            return [SlotSet("CCLI", "CL7")]
+        elif CurrentCheckListIndex == "CL8":
+            dispatcher.utter_message("Mehr Infos findest du hier:")
+            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            return [SlotSet("CCLI", "CL8")]
+        elif CurrentCheckListIndex == "CL9":
+            dispatcher.utter_message("Mehr Infos findest du hier:")
+            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            return [SlotSet("CCLI", "CL9")]
+        elif CurrentCheckListIndex == "CL10":
+            dispatcher.utter_message("Mehr Infos findest du hier:")
+            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            return [SlotSet("CCLI", "CL10")]
+        elif CurrentCheckListIndex == "CL11":
+            dispatcher.utter_message("Mehr Infos findest du hier:")
+            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            return [SlotSet("CCLI", "CL11")]
+        elif CurrentCheckListIndex == "CL12":
+            dispatcher.utter_message("Mehr Infos findest du hier:")
+            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            return [SlotSet("CCLI", "CL12")]
+        elif CurrentCheckListIndex == "CL13":
+            dispatcher.utter_message("Mehr Infos findest du hier:")
+            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            return [SlotSet("CCLI", "CL13")]
+        elif CurrentCheckListIndex == "CL14":
+            dispatcher.utter_message("Mehr Infos findest du hier:")
+            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            return [SlotSet("CCLI", "CL14")]
+        elif CurrentCheckListIndex == "CL15":
+            dispatcher.utter_message("Mehr Infos findest du hier:")
+            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            return [SlotSet("CCLI", "CL15")]
+        elif CurrentCheckListIndex == "CL16":
+            dispatcher.utter_message("Mehr Infos findest du hier:")
+            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            return [SlotSet("CCLI", "CL16")]
+        elif CurrentCheckListIndex == "CL17":
+            dispatcher.utter_message("Mehr Infos findest du hier:")
+            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            return [SlotSet("CCLI", "CL17")]
+        elif CurrentCheckListIndex == "CL18":
+            dispatcher.utter_message("Mehr Infos findest du hier:")
+            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            return [SlotSet("CCLI", "CL18")]
+        elif CurrentCheckListIndex == "CL19":
+            dispatcher.utter_message("Mehr Infos findest du hier:")
+            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            return [SlotSet("CCLI", "CL19")]
+        elif CurrentCheckListIndex == "CL20":
+            dispatcher.utter_message("Mehr Infos findest du hier:")
+            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            return [SlotSet("CCLI", "CL20")]
+        elif CurrentCheckListIndex == "CL21":
+            dispatcher.utter_message("Mehr Infos findest du hier:")
+            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            return [SlotSet("CCLI", "CL21")]
+        elif CurrentCheckListIndex == "CL22":
+            dispatcher.utter_message("Mehr Infos findest du hier:")
+            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            return [SlotSet("CCLI", "CL22")]
         else:
-            dispatcher.utter_message(f"Oh oh! Fehler: CCLI: {CurrentCheckListIndex}")
+            dispatcher.utter_message(f"Oh oh! Fehler: CCLI: {CurrentCheckListIndex}. \n Bitte Starte die Checkliste neu mit der Nachricht: ResetCL")
         return []
 
 
@@ -134,3 +256,37 @@ class CheckAccount(Action):
 
         return[]
 
+
+class CheckAccount(Action):
+    def name(self) -> Text:
+        return "action_check_account"
+    def run(self, dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
+
+        pwue = tracker.get_intent_of_latest_message('text')
+        nlulist = ["Passwortcheck ", "PasswortCheck ", "pwcheck ", "Passwort ", "Passwort überprüfen "] # COPY DATA FROM NLU
+        for a in nlulist:
+            if a in pwue:
+                password =  pwue.replace(a, "")
+        length_error = len(password) < 8
+        digit_error = re.search(r"\d", password) is None
+        uppercase_error = re.search(r"[A-Z]", password) is None
+        lowercase_error = re.search(r"[a-z]", password) is None
+        symbol_error = re.search(r"[ !#$%&'()*+,-./[\\\]^_`{|}~"+r'"]', password) is None
+        password_ok = not ( length_error or digit_error or uppercase_error or lowercase_error or symbol_error )
+
+        if password_ok == True:
+            dispatcher.utter_message("Passwort ist okay")
+        else:
+            dispatcher.utter_message("Dein Passwort ist nicht sicher.")
+            if length_error == True:
+                dispatcher.utter_message("Dein Passwort ist zu kurz")
+            if digit_error == True:
+                dispatcher.utter_message("Dein Passwort enthält keine Zahlen")
+            if uppercase_error == True:
+                dispatcher.utter_message("Dein Passwort enthält keine Großbuchstaben")
+            if lowercase_error == True:
+                dispatcher.utter_message("Dein Passwort enthält keine Kleinbuchstaben")
+            if symbol_error == True:
+                dispatcher.utter_message("Dein Passwort hat keine Sonderzeichen.")
