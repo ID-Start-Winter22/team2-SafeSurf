@@ -136,6 +136,14 @@ nlu:
   examples: |
     - Mehr Info
     - Mehr Informationen
+    
+
+- intent: pwcheck
+  examples: |
+    - PasswortCheck
+    - Passwort Check
+    - pwcheck
+    - Passwort
 
 # - intent: mood_great
 #   examples: |

@@ -257,9 +257,9 @@ class CheckAccount(Action):
         return[]
 
 
-class CheckAccount(Action):
+class pwchecker(Action):
     def name(self) -> Text:
-        return "action_check_account"
+        return "pwchecker"
     def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:

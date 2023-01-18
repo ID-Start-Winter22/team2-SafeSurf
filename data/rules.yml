@@ -41,6 +41,12 @@ rules:
   steps:
   - intent: mehrinfo
   - action: mehr_info
+
+- rule: pwcheck
+  steps:
+  - intent: pwcheck
+  - action: pwchecker
+  
   
 
 # - rule: Say hello
