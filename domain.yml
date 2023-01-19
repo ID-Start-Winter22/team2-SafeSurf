@@ -66,10 +66,10 @@ responses:
   - text: "Ich bin SafeSurf. Das solltest Du doch wissen."
 
   utter_fakewifi:
-  - text: "Oft werden fake Links per email versendet oder fake öffentliche Netzwerke eröffnet um Nutzerdaten zu klauen. \n Dabei sollte man auf die Korrekte schreibweise der Webseite achten. \n Nicht jeden Link öffnen den man bekommt. \n Wenn du mehr darüber herausfinden möchtest, lies dir einfach diesen Artikel durch:"
+  - text: "Oft werden fake Links 🔗 per email versendet oder fake öffentliche Netzwerke eröffnet um Nutzerdaten zu klauen. \n Dabei sollte man auf die Korrekte schreibweise der Webseite achten. \n Nicht jeden Link öffnen den man bekommt. \n Wenn du mehr darüber herausfinden möchtest, lies dir einfach diesen Artikel durch:"
 
   utter_onlinhandel:
-  - text: "Bei Zahlungen im Internet sollte man immer darauf achten, dass man auf vertrauenswürdigen Webseiten einkauft. Wichtig ist es außerdem eine sichere Zahlungsmethode zu nutzen, z.B. Paypal mit Käuferschutz 💳 \n Wenn du mehr darüber herausfinden möchtest, lies dir einfach diesen Artikel durch:"
+  - text: "Bei Zahlungen im Internet sollte man immer darauf achten, dass man auf vertrauenswürdigen Webseiten einkauft. \n Wichtig ist es außerdem eine sichere Zahlungsmethode zu nutzen, z.B. Paypal mit Käuferschutz 💳 \n Wenn du mehr darüber herausfinden möchtest, lies dir einfach diesen Artikel durch:"
 
   utter_datenschutzeinstellungen:
   - text: "Um sich vor Tracking durch Cookies zu schützen ist es wichtig die Datenschutzeinstellungen des Browsers Korrect einzustellen. \n Dabei ist darauf zu achten, dass die Cookies 🍪 nach schließen des Browsers gelöscht werden sollten. \n Wenn du mehr darüber herausfinden möchtest, lies dir einfach diesen Artikel durch:"
@@ -87,10 +87,10 @@ responses:
   - text: "Deine Passwörter sollten aus Groß und Kleinbuchstaben bestehen, sowie mindestens 8-16 Zeichen lang sein. ⚡ \n Es sollten Sonderzeichen im Passwort enthalten sein. (!,?,&) 🅰️ \n Es sollten unterschiedliche Passwörter benutzt werden. \n Es sollten keine persönlichen Daten enthalten sein. Zum Beispiel Geburtstage oder Namen 🔢 \n Du kannst auch dein Passwort automatisch überprüfen lassen mit: Passwortcheck Passwort123 \n Wenn du mehr darüber herausfinden möchtest, lies dir einfach diesen Artikel durch: " 
 
   utter_vpn:
-  - text: "Für einen Zusätzliche Schutz in öffentlichen Netzen kannst du einen VPN verwenden. Dieser Verschlüsselt deine gesendeten Informationen und schützt dich vor Attacken 🛡️. \n Wenn du mehr darüber herausfinden möchtest, lies dir einfach diesen Artikel durch: " 
+  - text: "Für einen Zusätzliche Schutz in öffentlichen Netzen kannst du einen VPN verwenden. \n Dieser Verschlüsselt deine gesendeten Informationen und schützt dich vor Attacken 🛡️. \n Wenn du mehr darüber herausfinden möchtest, lies dir einfach diesen Artikel durch: " 
 
   utter_virenschutz:
-  - text: "Ein Virenschutz ist eine Sicherheitsschicht 🛡️ die dein Gerät vor Schadsoftware schützt. Für die meisten Geräte reicht der vorinstallierte Schutz aus. \n Wenn du mehr darüber herausfinden möchtest, lies dir einfach diesen Artikel durch: " 
+  - text: "Ein Virenschutz ist eine Sicherheitsschicht 🛡️ die dein Gerät vor Schadsoftware schützt. \n Für die meisten Geräte reicht der vorinstallierte Schutz aus. \n Wenn du mehr darüber herausfinden möchtest, lies dir einfach diesen Artikel durch: " 
 
   utter_domain_fakewifi:
   - text: "[Fake Links / Wifi Hotspots](https://banifli.de/fake-links-fake-wifi-hotspots/)"

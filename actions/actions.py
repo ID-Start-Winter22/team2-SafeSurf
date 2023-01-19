@@ -33,15 +33,14 @@ class nextchecklist(Action):
         domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
         CurrentCheckListIndex = tracker.get_slot("CCLI")
         if CurrentCheckListIndex == "CL0":
-            dispatcher.utter_message("Okay, starten wir mit Passwörtern! 🔒 \nBei Passwortern gibt es wichtige Dinge zu beachten:")
+            dispatcher.utter_message("Okay, starten wir mit Passwörtern! 🔒 \n Bei Passwörtern gibt es wichtige Dinge zu beachten:")
             dispatcher.utter_message("Deine Passwörter sollten aus Groß und Kleinbuchstaben bestehen, sowie mindestens 8-16 Zeichen lang sein. ⚡ \n Es sollten Sonderzeichen im Passwort enthalten sein. (!,?,&) 🅰️ \n Es sollten unterschiedliche Passwörter benutzt werden. \n Es sollten keine persönlichen Daten enthalten sein. Zum Beispiel Geburtstage oder Namen 🔢 \n Du kannst auch dein Passwort automatisch überprüfen lassen mit: Passwortcheck Passwort123")
             buttons = [{"title": "Mehr Informationen 📥", "payload": "Mehr Info"}, {"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
             dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
             return [SlotSet("CCLI", "CL1")]
         elif CurrentCheckListIndex == "CL1":
-            dispatcher.utter_message(CurrentCheckListIndex)
-            dispatcher.utter_message("Machen wir Weiter mit Webseiten! 🌍 \n Du solltest nicht Webseite besuchen, die du findest!")
-            dispatcher.utter_message("Besuche nur Webseiten mit SSL Verbindung (Grünes Schloss 🔒 neben der Link Leiste) \n Überprüfe regelmäßig deine Browsereinstellungen bezügl. Datenschutz 🌐 \n Achte bei Webseiten auf die geforderten Cookies im Cookie Banner. 🍪")
+            dispatcher.utter_message("Machen wir Weiter mit 2FA 🔑")
+            dispatcher.utter_message("2FA ist ein zweiter Schlüssel 🔑 zu deinem Konto. \n Dieser zweite Schlüssel ist meist ein zeit generierter 6 zahlen code und wird bei jeder erneuten Anmeldung abgefragt.")
             buttons = [{"title": "Mehr Informationen 📥", "payload": "Mehr Info"}, {"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
             dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
             return [SlotSet("CCLI", "CL2")]
@@ -52,12 +51,43 @@ class nextchecklist(Action):
             buttons = [{"title": "Mehr Informationen 📥", "payload": "Mehr Info"}, {"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
             dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
             return [SlotSet("CCLI", "CL3")]
-        elif CurrentCheckListIndex == "CL4":
-            dispatcher.utter_message("Machen wir Weiter mit Webseiten! 🌍 \n Du solltest nicht Webseite besuchen, die du findest!")
-            dispatcher.utter_message("Besuche nur Webseiten mit SSL Verbindung (Grünes Schloss 🔒 neben der Link Leiste) \n Überprüfe regelmäßig deine Browsereinstellungen bezügl. Datenschutz 🌐 \n Achte bei Webseiten auf die geforderten Cookies im Cookie Banner. 🍪")
+        elif CurrentCheckListIndex == "CL3":
+            dispatcher.utter_message(CurrentCheckListIndex)
+            dispatcher.utter_message("Machen wir Weiter mit Updates! 🔄 \n Du solltest dein System immer auf dem neusten Stand halten")
+            dispatcher.utter_message("Deine Software sollte immer auf dem neusten Stand sein, dadurch werden Systemlücken geschlossen und dein System wird generell schwieriger zu knacken.")
             buttons = [{"title": "Mehr Informationen 📥", "payload": "Mehr Info"}, {"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
             dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
             return [SlotSet("CCLI", "CL4")]
+        elif CurrentCheckListIndex == "CL4":
+            dispatcher.utter_message("Machen wir Weiter mit fake öffentlichen Netzwerken 📶 und fake links 🔗")
+            dispatcher.utter_message("Oft werden fake Links 🔗 per email versendet oder fake öffentliche Netzwerke eröffnet um Nutzerdaten zu klauen. \n Dabei sollte man auf die Korrekte schreibweise der Webseite achten.")
+            buttons = [{"title": "Mehr Informationen 📥", "payload": "Mehr Info"}, {"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
+            return [SlotSet("CCLI", "CL5")]
+        elif CurrentCheckListIndex == "CL5":
+            dispatcher.utter_message("Machen wir Weiter mit VPN's 📶")
+            dispatcher.utter_message("Für einen Zusätzliche Schutz in öffentlichen Netzen kannst du einen VPN verwenden. \n Dieser Verschlüsselt deine gesendeten Informationen und schützt dich vor Attacken 🛡️.")
+            buttons = [{"title": "Mehr Informationen 📥", "payload": "Mehr Info"}, {"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
+            return [SlotSet("CCLI", "CL6")]
+        elif CurrentCheckListIndex == "CL6":
+            dispatcher.utter_message("Machen wir Weiter mit Datenschutzeinstellungen 🌍")
+            dispatcher.utter_message("Um sich vor Tracking durch Cookies zu schützen ist es wichtig die Datenschutzeinstellungen des Browsers Korrect einzustellen. \n Dabei ist darauf zu achten, dass die Cookies 🍪 nach schließen des Browsers gelöscht werden sollten.")
+            buttons = [{"title": "Mehr Informationen 📥", "payload": "Mehr Info"}, {"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
+            return [SlotSet("CCLI", "CL7")]       
+        elif CurrentCheckListIndex == "CL7":
+            dispatcher.utter_message("Machen wir Weiter mit Online Shopping 💳")
+            dispatcher.utter_message("Bei Zahlungen im Internet sollte man immer darauf achten, dass man auf vertrauenswürdigen Webseiten einkauft. \n Wichtig ist es außerdem eine sichere Zahlungsmethode zu nutzen, z.B. Paypal mit Käuferschutz 💳")
+            buttons = [{"title": "Mehr Informationen 📥", "payload": "Mehr Info"}, {"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
+            return [SlotSet("CCLI", "CL8")]                
+        elif CurrentCheckListIndex == "CL8":
+            dispatcher.utter_message("Machen wir Weiter mit Antivieren Software 🛡️")
+            dispatcher.utter_message("Ein Virenschutz ist eine Sicherheitsschicht 🛡️ die dein Gerät vor Schadsoftware schützt. \n Für die meisten Geräte reicht der vorinstallierte Schutz aus.")
+            buttons = [{"title": "Mehr Informationen 📥", "payload": "Mehr Info"}, {"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
+            return [SlotSet("CCLI", "CL9")]
         else:
             dispatcher.utter_message(f"Oh oh! Fehler: CCLI: {CurrentCheckListIndex}")
         return []
@@ -75,7 +105,7 @@ class mehrinfo(Action):
             return [SlotSet("CCLI", "CL1")]
         elif CurrentCheckListIndex == "CL2":
             dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            dispatcher.utter_message("https://banifli.de/warum-es-sinnvoll-ist-2fa-zu-verwenden/")
             buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
             dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
             return [SlotSet("CCLI", "CL2")]
@@ -87,43 +117,43 @@ class mehrinfo(Action):
             return [SlotSet("CCLI", "CL3")]
         elif CurrentCheckListIndex == "CL4":
             dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            dispatcher.utter_message("https://banifli.de/updates-schliessen-von-systemluecken/")
             buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
             dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
             return [SlotSet("CCLI", "CL4")]
         elif CurrentCheckListIndex == "CL5":
             dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            dispatcher.utter_message("https://banifli.de/fake-links-fake-wifi-hotspots/")
             buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
             dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
             return [SlotSet("CCLI", "CL5")]
         elif CurrentCheckListIndex == "CL6":
             dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            dispatcher.utter_message("https://banifli.de/warum-es-sinnvoll-ist-einen-vpn-zu-verwenden-2/")
             buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
             dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
             return [SlotSet("CCLI", "CL6")]
         elif CurrentCheckListIndex == "CL7":
             dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            dispatcher.utter_message("https://banifli.de/datenschutz-einstellungen-im-browser/")
             buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
             dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
             return [SlotSet("CCLI", "CL7")]
         elif CurrentCheckListIndex == "CL8":
             dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            dispatcher.utter_message("https://banifli.de/gefahren-im-onlinehandel/")
             buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
             dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
             return [SlotSet("CCLI", "CL8")]
         elif CurrentCheckListIndex == "CL9":
             dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            dispatcher.utter_message("(https://banifli.de/antiviren-software/")
             buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
             dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
             return [SlotSet("CCLI", "CL9")]
         elif CurrentCheckListIndex == "CL10":
             dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
+            dispatcher.utter_message("https://banifli.de/warum-es-sinnvoll-ist-2fa-zu-verwenden/")
             buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
             dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
             return [SlotSet("CCLI", "CL10")]
