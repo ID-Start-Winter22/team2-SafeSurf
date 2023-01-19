@@ -105,51 +105,43 @@ class mehrinfo(Action):
             return [SlotSet("CCLI", "CL1")]
         elif CurrentCheckListIndex == "CL2":
             dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/warum-es-sinnvoll-ist-2fa-zu-verwenden/")
             buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
-            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-2fa-zu-verwenden/", buttons)
             return [SlotSet("CCLI", "CL2")]
         elif CurrentCheckListIndex == "CL3":
             dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
             buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
-            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            dispatcher.utter_button_message("https://banifli.de/verschluesselte-webseiten/", buttons)
             return [SlotSet("CCLI", "CL3")]
         elif CurrentCheckListIndex == "CL4":
             dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/updates-schliessen-von-systemluecken/")
             buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
-            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            dispatcher.utter_button_message("https://banifli.de/updates-schliessen-von-systemluecken/", buttons)
             return [SlotSet("CCLI", "CL4")]
         elif CurrentCheckListIndex == "CL5":
             dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/fake-links-fake-wifi-hotspots/")
             buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
-            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            dispatcher.utter_button_message("https://banifli.de/fake-links-fake-wifi-hotspots/", buttons)
             return [SlotSet("CCLI", "CL5")]
         elif CurrentCheckListIndex == "CL6":
             dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/warum-es-sinnvoll-ist-einen-vpn-zu-verwenden-2/")
             buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
-            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-einen-vpn-zu-verwenden-2/", buttons)
             return [SlotSet("CCLI", "CL6")]
         elif CurrentCheckListIndex == "CL7":
             dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/datenschutz-einstellungen-im-browser/")
             buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
-            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            dispatcher.utter_button_message("https://banifli.de/datenschutz-einstellungen-im-browser/", buttons)
             return [SlotSet("CCLI", "CL7")]
         elif CurrentCheckListIndex == "CL8":
             dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/gefahren-im-onlinehandel/")
             buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
-            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            dispatcher.utter_button_message("https://banifli.de/gefahren-im-onlinehandel/", buttons)
             return [SlotSet("CCLI", "CL8")]
         elif CurrentCheckListIndex == "CL9":
             dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("(https://banifli.de/antiviren-software/")
             buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
-            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            dispatcher.utter_button_message("https://banifli.de/antiviren-software/", buttons)
             return [SlotSet("CCLI", "CL9")]
         elif CurrentCheckListIndex == "CL10":
             dispatcher.utter_message("Mehr Infos findest du hier:")
