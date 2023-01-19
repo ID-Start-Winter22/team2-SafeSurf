@@ -2,6 +2,57 @@ version: "3.1"
 
 stories:
 
+    - story: Bot-Challenge and ask for creator
+      steps:
+      - intent: is_bot
+      - action: utter_i_am_a_bot 
+      - intent: how_created
+      - action: utter_created_by_steadforce  
+      
+    - story: Fake Wifi
+      steps:
+      - intent: fakewifi
+      - action: utter_fakewifi
+
+    - story: Onlinehandel
+      steps:
+      - intent: onlinhandel
+      - action: utter_onlinhandel
+
+    - story: datenschutzeinstellungen
+      steps:
+      - intent: datenschutzeinstellungen
+      - action: utter_datenschutzeinstellungen
+
+    - story: verschluesselung
+      steps:
+      - intent: verschluesselung
+      - action: utter_verschluesselung
+
+    - story: updates
+      steps:
+      - intent: updates
+      - action: utter_updates
+
+    - story: 2fa
+      steps:
+      - intent: 2fa
+      - action: utter_2fa
+
+    - story: passwort
+      steps:
+      - intent: passwort
+      - action: utter_passwort
+
+    - story: vpn
+      steps:
+      - intent: vpn
+      - action: utter_vpn
+
+    - story: virenschutz
+      steps:
+      - intent: virenschutz
+      - action: utter_virenschutz
 # - story: sad path 1
 #   steps:
 #   - intent: greet

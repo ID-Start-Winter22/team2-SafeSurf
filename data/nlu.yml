@@ -145,6 +145,67 @@ nlu:
     - pwcheck
     - Passwort
 
+- intent: fakewifi
+  examples: |
+    - Fake Wifi
+    - Wifi
+    - Fake Links
+    - Links
+    - Gefahren bei Links
+
+- intent: onlinhandel
+  examples: |
+    - Gefahren Onlinehandel
+    - Shopping
+    - Kaufen
+    - Bezahlen Internet
+
+- intent: datenschutzeinstellungen
+  examples: |
+    - datenschutz einstellungen
+    - Einstellungen
+    - Browser
+    - Internet Browser
+
+- intent: verschluesselung
+  examples: |
+    - Verschlüsselung 
+    - Webseiten Verschlüsselung
+    - Verschlüsseln
+
+- intent: updates
+  examples: |
+    - systemlücken schließen
+    - updates
+    - auf neustem stand halten
+    - PC sichern
+
+- intent: 2fa
+  examples: |
+    - passwörter sichern
+    - 2fa
+    - passwort sichern
+
+- intent: passwort
+  examples: |
+    - sicheres Passwort
+    - passwort länge
+    - passwort komplex
+    - wie mache ich ein komplexes Passwort
+
+- intent: vpn
+  examples: |
+    - VPN
+    - sinnvoll
+    - nutzen von VPN
+
+- intent: virenschutz
+  examples: |
+    - Antivirensoftware
+    - Virenschutz
+    - brauch ich einen Virenschutz
+    - warum ist Antivierensoftware wichtig?
+    
 # - intent: mood_great
 #   examples: |
 #     - perfect
