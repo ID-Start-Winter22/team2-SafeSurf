@@ -59,6 +59,9 @@ responses:
   utter_ask_mail:
   - text: "Wie lautet deine Mail Adresse?"
 
+  utter_i_am_a_bot:
+  - text: "Ich bin SafeSurf. Das solltest Du doch wissen."
+
   utter_iamabot:
   - text: "Ich bin SafeSurf. Das solltest Du doch wissen."
 

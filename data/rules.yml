@@ -46,8 +46,52 @@ rules:
   steps:
   - intent: pwcheck
   - action: pwchecker
-  
-  
+
+- rule: Fake Wifi
+  steps:
+  - intent: fakewifi
+  - action: utter_fakewifi
+
+- rule: Onlinehandel
+  steps:
+  - intent: onlinhandel
+  - action: utter_onlinhandel
+
+- rule: datenschutzeinstellungen
+  steps:
+  - intent: datenschutzeinstellungen
+  - action: utter_datenschutzeinstellungen
+
+- rule: verschluesselung
+  steps:
+  - intent: verschluesselung
+  - action: utter_verschluesselung
+
+- rule: updates
+  steps:
+  - intent: updates
+  - action: utter_updates
+
+- rule: 2fa
+  steps:
+  - intent: 2fa
+  - action: utter_2fa
+
+- rule: passwort
+  steps:
+  - intent: passwort
+  - action: utter_passwort
+
+- rule: vpn
+  steps:
+  - intent: vpn
+  - action: utter_vpn
+
+- rule: virenschutz
+  steps:
+  - intent: virenschutz
+  - action: utter_virenschutz
+
 
 # - rule: Say hello
 #   steps:
