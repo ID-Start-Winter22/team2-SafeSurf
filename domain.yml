@@ -66,32 +66,41 @@ responses:
   - text: "Ich bin SafeSurf. Das solltest Du doch wissen."
 
   utter_fakewifi:
-  - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: [Fake Links / Wifi Hotspots](https://banifli.de/fake-links-fake-wifi-hotspots/)"
+  - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: "
+  - text: "[Fake Links / Wifi Hotspots](https://banifli.de/fake-links-fake-wifi-hotspots/)"
 
   utter_onlinhandel:
-  - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: [Gefahren im Onlinehandel](https://banifli.de/gefahren-im-onlinehandel/)"
-  
+  - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: "
+  - text: "[Gefahren im Onlinehandel](https://banifli.de/gefahren-im-onlinehandel/)"
+
   utter_datenschutzeinstellungen:
-  - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: [Datenschutz Einstellungen im Browser](https://banifli.de/datenschutz-einstellungen-im-browser/)"
+  - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: "
+  - text: "[Datenschutz Einstellungen im Browser](https://banifli.de/datenschutz-einstellungen-im-browser/)"
 
   utter_verschluesselung:
-  - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: [Verschlüsselte Webseiten](https://banifli.de/verschluesselte-webseiten/)"  
+  - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: "  
+  - text: "[Verschlüsselte Webseiten](https://banifli.de/verschluesselte-webseiten/)"
 
   utter_updates:
-  - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: [Updates - Schließen von Systemlücken](https://banifli.de/updates-schliessen-von-systemluecken/)" 
+  - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: " 
+  - text: "[Updates - Schließen von Systemlücken](https://banifli.de/updates-schliessen-von-systemluecken/)"
 
   utter_2fa:
-  - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: [2FA - Die Erweiterung des Passworts](https://banifli.de/warum-es-sinnvoll-ist-2fa-zu-verwenden/)" 
+  - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: " 
+  - text: "[2FA - Die Erweiterung des Passworts](https://banifli.de/warum-es-sinnvoll-ist-2fa-zu-verwenden/)"
 
   utter_passwort:
-  - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: [Passwörter – Je Komplexer desto Besser](https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/)" 
+  - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: " 
+  - text: "[Passwörter – Je Komplexer desto Besser](https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/)"
 
   utter_vpn:
-  - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: [VPN – Hilfreicher Begleiter in öffentlichen Netzwerken](https://banifli.de/warum-es-sinnvoll-ist-einen-vpn-zu-verwenden-2/)" 
+  - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: " 
+  - text: "[Vierenschutz – Warum ist dieser Wichtig?](https://banifli.de/antiviren-software/)"
 
   utter_virenschutz:
-  - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: [Vierenschutz – Warum ist dieser Wichtig?](https://banifli.de/antiviren-software/)" 
-  
+  - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: " 
+  - text: "[VPN – Hilfreicher Begleiter in öffentlichen Netzwerken](https://banifli.de/warum-es-sinnvoll-ist-einen-vpn-zu-verwenden-2/)"
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
