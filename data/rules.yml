@@ -51,47 +51,55 @@ rules:
   steps:
   - intent: fakewifi
   - action: utter_fakewifi
+  - action: utter_domain_fakewifi
 
 - rule: Onlinehandel
   steps:
   - intent: onlinhandel
   - action: utter_onlinhandel
+  - action: utter_domain_onlinhandel
 
 - rule: datenschutzeinstellungen
   steps:
   - intent: datenschutzeinstellungen
   - action: utter_datenschutzeinstellungen
+  - action: utter_domain_datenschutzeinstellungen
 
 - rule: verschluesselung
   steps:
   - intent: verschluesselung
   - action: utter_verschluesselung
+  - action: utter_domain_verschluesselung
 
 - rule: updates
   steps:
   - intent: updates
   - action: utter_updates
+  - action: utter_domain_updates
 
 - rule: 2fa
   steps:
   - intent: 2fa
   - action: utter_2fa
+  - action: utter_domain_2fa
 
 - rule: passwort
   steps:
   - intent: passwort
   - action: utter_passwort
+  - action: utter_domain_passwort
 
 - rule: vpn
   steps:
   - intent: vpn
   - action: utter_vpn
+  - action: utter_domain_vpn
 
 - rule: virenschutz
   steps:
   - intent: virenschutz
   - action: utter_virenschutz
-
+  - action: utter_domain_virenschutz
 
 # - rule: Say hello
 #   steps:

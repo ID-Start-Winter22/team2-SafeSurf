@@ -67,38 +67,56 @@ responses:
 
   utter_fakewifi:
   - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: "
-  - text: "[Fake Links / Wifi Hotspots](https://banifli.de/fake-links-fake-wifi-hotspots/)"
 
   utter_onlinhandel:
   - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: "
-  - text: "[Gefahren im Onlinehandel](https://banifli.de/gefahren-im-onlinehandel/)"
 
   utter_datenschutzeinstellungen:
   - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: "
-  - text: "[Datenschutz Einstellungen im Browser](https://banifli.de/datenschutz-einstellungen-im-browser/)"
 
   utter_verschluesselung:
   - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: "  
-  - text: "[Verschlüsselte Webseiten](https://banifli.de/verschluesselte-webseiten/)"
 
   utter_updates:
   - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: " 
-  - text: "[Updates - Schließen von Systemlücken](https://banifli.de/updates-schliessen-von-systemluecken/)"
 
   utter_2fa:
   - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: " 
-  - text: "[2FA - Die Erweiterung des Passworts](https://banifli.de/warum-es-sinnvoll-ist-2fa-zu-verwenden/)"
 
   utter_passwort:
   - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: " 
-  - text: "[Passwörter – Je Komplexer desto Besser](https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/)"
 
   utter_vpn:
   - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: " 
-  - text: "[Vierenschutz – Warum ist dieser Wichtig?](https://banifli.de/antiviren-software/)"
 
   utter_virenschutz:
   - text: "Ich habe hier einen Artikel indem du dich darüber Infromieren kannst: " 
+
+  utter_domain_fakewifi:
+  - text: "[Fake Links / Wifi Hotspots](https://banifli.de/fake-links-fake-wifi-hotspots/)"
+
+  utter_domain_onlinhandel:
+  - text: "[Gefahren im Onlinehandel](https://banifli.de/gefahren-im-onlinehandel/)"
+
+  utter_domain_datenschutzeinstellungen:
+  - text: "[Datenschutz Einstellungen im Browser](https://banifli.de/datenschutz-einstellungen-im-browser/)"
+
+  utter_domain_verschluesselung: 
+  - text: "[Verschlüsselte Webseiten](https://banifli.de/verschluesselte-webseiten/)"
+
+  utter_domain_updates: 
+  - text: "[Updates - Schließen von Systemlücken](https://banifli.de/updates-schliessen-von-systemluecken/)"
+
+  utter_domain_2fa: 
+  - text: "[2FA - Die Erweiterung des Passworts](https://banifli.de/warum-es-sinnvoll-ist-2fa-zu-verwenden/)"
+
+  utter_domain_passwort:
+  - text: "[Passwörter – Je Komplexer desto Besser](https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/)"
+
+  utter_domain_vpn: 
+  - text: "[Vierenschutz – Warum ist dieser Wichtig?](https://banifli.de/antiviren-software/)"
+
+  utter_domain_virenschutz:
   - text: "[VPN – Hilfreicher Begleiter in öffentlichen Netzwerken](https://banifli.de/warum-es-sinnvoll-ist-einen-vpn-zu-verwenden-2/)"
 
 session_config:
