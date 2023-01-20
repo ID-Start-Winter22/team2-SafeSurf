@@ -7,6 +7,11 @@ rules:
   - intent: mainmenu
   - action: action_home_menu
 
+- rule: Beleidigung
+  steps:
+  - intent: beleidigung
+  - action: utter_sonicht
+
 - rule: Mail Check
   steps:
   - intent: check_mail

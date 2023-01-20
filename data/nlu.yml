@@ -205,6 +205,23 @@ nlu:
     - Virenschutz
     - brauch ich einen Virenschutz
     - warum ist Antivierensoftware wichtig?
+
+- intent: beleidigung
+  examples: |
+    - Huhrensohn
+    - Bastard
+    - Fotze
+    - Huhre
+    - wichser
+    - Nutte
+    - Schwuchtel
+    - Arschficker
+    - Arschloch
+    - Polacke
+    - Schlitzauge
+    - Mongo
+    - Krüppel
+    - Missgeburt
     
 # - intent: mood_great
 #   examples: |

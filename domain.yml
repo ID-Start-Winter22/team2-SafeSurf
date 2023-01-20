@@ -119,6 +119,9 @@ responses:
   utter_domain_virenschutz:
   - text: "[Vierenschutz – Warum ist dieser Wichtig?](https://banifli.de/antiviren-software/)"
 
+  utter_sonicht:
+  - text: "Ich habe auch gefühle 😭."
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
