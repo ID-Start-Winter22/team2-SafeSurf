@@ -120,6 +120,9 @@ nlu:
     - Mail Check
     - Mail prüfen
     - Account überprüfen
+    - Mailcheck Erklärung
+    - Mailcheck
+    - Mail check
 
 - intent: nextstep
   examples: |
@@ -141,6 +144,7 @@ nlu:
 - intent: pwcheck
   examples: |
     - PasswortCheck
+    - Passwortcheck Erklärung
     - Passwort Check
     - pwcheck
     - Passwort
