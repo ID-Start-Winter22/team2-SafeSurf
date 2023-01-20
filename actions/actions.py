@@ -83,9 +83,19 @@ class nextchecklist(Action):
         elif CurrentCheckListIndex == "CL8":
             dispatcher.utter_message("Machen wir weiter mit Online Shopping 💳")
             dispatcher.utter_message("Bei Zahlungen im Internet sollte man immer darauf achten, dass man auf vertrauenswürdigen Webseiten einkauft. \n Wichtig ist es außerdem eine sichere Zahlungsmethode zu nutzen, z.B. Paypal mit Käuferschutz 💳")
-            buttons = [{"title": "Mehr Informationen 📥", "payload": "Mehr Info"}, {"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            buttons = [{"title": "Mehr Informationen 📥", "payload": "Mehr Info"}, {"title": "Abschließen 🏁", "payload": "Nächster Schritt"}]
             dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
-            return [SlotSet("CCLI", "CL9")]                
+            return [SlotSet("CCLI", "CL9")]
+        elif CurrentCheckListIndex == "CL9":
+            dispatcher.utter_message("JUHU! 🏁 Gemeinsam sicher im Internet. Falls du Fragen hast, oder dich mehr Informieren möchtest stelle mir einfach eine Frage oder schau dich auf unserer Webseite um! 🌍")
+            buttons = [{"title": "Checkliste zurücksetzen ⚒️", "payload": "ResetCL"}, {"title": "Dankeschön sagen! 💟", "payload": "Dankeschön"}]
+            dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
+            return [SlotSet("CCLI", "CL10")]          
+        elif CurrentCheckListIndex == "CL10":
+            dispatcher.utter_message("JUHU! 🏁 Gemeinsam sicher im Internet. Falls du Fragen hast, oder dich mehr Informieren möchtest stelle mir einfach eine Frage oder schau dich auf unserer Webseite um! 🌍")
+            buttons = [{"title": "Checkliste zurücksetzen ⚒️", "payload": "ResetCL"}, {"title": "Dankeschön sagen! 💟", "payload": "Dankeschön"}]
+            dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
+            return [SlotSet("CCLI", "CL10")]     
         else:
             dispatcher.utter_message(f"Oh oh! Fehler: CCLI: {CurrentCheckListIndex}")
         return []
@@ -142,71 +152,9 @@ class mehrinfo(Action):
             dispatcher.utter_button_message("[Gefahren im Onlinehandel](https://banifli.de/gefahren-im-onlinehandel/)", buttons)
             return [SlotSet("CCLI", "CL9")]
         elif CurrentCheckListIndex == "CL10":
-            dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/warum-es-sinnvoll-ist-2fa-zu-verwenden/")
-            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
-            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
+            dispatcher.utter_message("Für mehr Informationen, besuche unsere Webseite! 🌍")
+            dispatcher.utter_message("[Banifli SafeSurf Blog](https://banifli.de/blog//)")
             return [SlotSet("CCLI", "CL10")]
-        elif CurrentCheckListIndex == "CL11":
-            dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
-            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
-            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
-            return [SlotSet("CCLI", "CL11")]
-        elif CurrentCheckListIndex == "CL12":
-            dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
-            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
-            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
-            return [SlotSet("CCLI", "CL12")]
-        elif CurrentCheckListIndex == "CL13":
-            dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
-            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
-            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
-            return [SlotSet("CCLI", "CL13")]
-        elif CurrentCheckListIndex == "CL14":
-            dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
-            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
-            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
-            return [SlotSet("CCLI", "CL14")]
-        elif CurrentCheckListIndex == "CL15":
-            dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
-            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
-            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
-            return [SlotSet("CCLI", "CL15")]
-        elif CurrentCheckListIndex == "CL16":
-            dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
-            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
-            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
-            return [SlotSet("CCLI", "CL16")]
-        elif CurrentCheckListIndex == "CL17":
-            dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
-            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
-            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
-            return [SlotSet("CCLI", "CL17")]
-        elif CurrentCheckListIndex == "CL18":
-            dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
-            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
-            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
-            return [SlotSet("CCLI", "CL18")]
-        elif CurrentCheckListIndex == "CL19":
-            dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
-            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
-            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
-            return [SlotSet("CCLI", "CL19")]
-        elif CurrentCheckListIndex == "CL20":
-            dispatcher.utter_message("Mehr Infos findest du hier:")
-            dispatcher.utter_message("https://banifli.de/verschluesselte-webseiten/")
-            buttons = [{"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
-            dispatcher.utter_button_message("https://banifli.de/warum-es-sinnvoll-ist-komplexe-passwoerter-zu-verwenden/", buttons)
-            return [SlotSet("CCLI", "CL20")]
         else:
             dispatcher.utter_message(f"Oh oh! Fehler: CCLI: {CurrentCheckListIndex}. \n Bitte Starte die Checkliste neu mit der Nachricht: ResetCL")
         return []
