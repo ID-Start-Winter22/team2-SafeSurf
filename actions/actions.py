@@ -87,12 +87,12 @@ class nextchecklist(Action):
             dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
             return [SlotSet("CCLI", "CL9")]
         elif CurrentCheckListIndex == "CL9":
-            dispatcher.utter_message("JUHU! 🏁 Gemeinsam sicher im Internet. Falls du Fragen hast, oder dich mehr Informieren möchtest stelle mir einfach eine Frage oder schau dich auf unserer Webseite um! 🌍")
+            dispatcher.utter_message("JUHU! 🏁 Gemeinsam sicher im Internet. Falls du Fragen hast, oder dich mehr Informieren möchtest stelle mir einfach eine Frage oder schau dich auf unserer [Webseite](https://banifli.de/) um! 🌍")
             buttons = [{"title": "Checkliste zurücksetzen ⚒️", "payload": "ResetCL"}, {"title": "Dankeschön sagen! 💟", "payload": "Dankeschön"}]
             dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
             return [SlotSet("CCLI", "CL10")]          
         elif CurrentCheckListIndex == "CL10":
-            dispatcher.utter_message("JUHU! 🏁 Gemeinsam sicher im Internet. Falls du Fragen hast, oder dich mehr Informieren möchtest stelle mir einfach eine Frage oder schau dich auf unserer Webseite um! 🌍")
+            dispatcher.utter_message("JUHU! 🏁 Gemeinsam sicher im Internet. Falls du Fragen hast, oder dich mehr Informieren möchtest stelle mir einfach eine Frage oder schau dich auf unserer [Webseite](https://banifli.de/) um! 🌍")
             buttons = [{"title": "Checkliste zurücksetzen ⚒️", "payload": "ResetCL"}, {"title": "Dankeschön sagen! 💟", "payload": "Dankeschön"}]
             dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
             return [SlotSet("CCLI", "CL10")]     
