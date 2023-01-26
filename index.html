@@ -7,23 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>SafeSurf Chatbot</title>
 </head>
 <style>
 body {
- background: url("http://banifli.de/images/indexbg.jpg") no-repeat center center fixed; 
+ background: url("https://banifli.de/images/indexbg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   background-position: center;
 }
+.rw-conversation-container .rw-header{background-color:hsl(250, 69%, 61%);}
+.rw-conversation-container .rw-messages-container .rw-message .rw-client{background-color: hsl(250, 69%, 61%);}
+.rw-launcher{background-color: hwb(234 34% 12%);}
+.rw-conversation-container .rw-reply{background-color: hsl(250, 69%, 61%); border: 1px solid hsl(250, 69%, 61%);}
 </style>
-<body>
-    <div
-        id="rasa-chat-widget" 
-        data-websocket-url="http://localhost:5005/"  
+<body><!--
+    <div>
+        id="rasa-chat-widget"
+        data-websocket-url="http://bot.banifli.de:5005/"
         data-height=700
         data-width=550
         data-avatar-url="./chatbot.png"
@@ -31,8 +35,54 @@ body {
         data-primary="#2472b7"
         data-default-open="true"
         data-primary-highlight="#2b85d3">
-        
-    </div>
+
+    </div> -->
+<script>
+setInterval(function(){
+    if((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+        // Do nothing, user is already at the bottom of the page
+    } else {
+        window.scroll({
+          top: document.body.scrollHeight,
+          left: 0,
+          behavior: 'smooth'
+        });
+    }
+}, 2500);
+</script>
+<script>
+!(function () {
+            let e = document.createElement("script"),
+              t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+              "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.min.js"),
+              (e.async = !0),
+              (e.onload = () => {
+                window.WebChat.default(
+                  {
+                    customData: { language: "de" },
+                    socketUrl: "http://bot.banifli.de:5005/",
+                    title: 'SafeSurf bot',
+                    subtitle: 'Sage Hallo um zu starten!',
+                    profileAvatar: "https://banifli.de/images/avatar.jpg",
+                    showMessageDate: true,
+                    showFullScreenButton: true,
+                    inputTextFieldHint: "Frage SafeSurf...",
+                    customMessageDelay: (message) => {
+                      let delay = message.length * 20;
+                      if (delay > 2 * 1000) delay = 3 * 1000;
+                      if (delay < 400) delay = 1000;
+                      return delay;
+                    }
+                  },
+                  null
+                );
+              }),
+              t.insertBefore(e, t.firstChild);
+          })();
+          </script>
     <script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
 </body>
 </html>
+
+

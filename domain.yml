@@ -120,7 +120,7 @@ responses:
   - text: "[Vierenschutz – Warum ist dieser Wichtig?](https://banifli.de/antiviren-software/)"
 
   utter_sonicht:
-  - text: "Ich habe auch gefühle 😭."
+  - text: "Ich habe auch Gefühle 😭."
 
 session_config:
   session_expiration_time: 60

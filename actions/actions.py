@@ -35,7 +35,7 @@ class nextchecklist(Action):
         if CurrentCheckListIndex == "CL0":
             dispatcher.utter_message("Okay, starten wir mit Passwörtern! 🔒 \n Bei Passwörtern gibt es wichtige Dinge zu beachten:")
             dispatcher.utter_message("Deine Passwörter sollten aus Groß und Kleinbuchstaben bestehen, sowie mindestens 8-16 Zeichen lang sein. ⚡ \n Es sollten Sonderzeichen im Passwort enthalten sein. (!,?,&) 🅰️ \n Es sollten unterschiedliche Passwörter benutzt werden. \n Es sollten keine persönlichen Daten enthalten sein. Zum Beispiel Geburtstage oder Namen 🔢 \n Du kannst auch dein Passwort automatisch überprüfen lassen mit: Passwortcheck Passwort123")
-            buttons = [{"title": "Mehr Informationen 📥", "payload": "Mehr Info"}, {"title": "Passwortcheck Hile 🆘", "payload": "Passwortcheck Erklärung"}, {"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
+            buttons = [{"title": "Mehr Informationen 📥", "payload": "Mehr Info"}, {"title": "Passwortcheck Hilfe 🆘", "payload": "Passwortcheck Erklärung"}, {"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
             dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
             return [SlotSet("CCLI", "CL1")]
         elif CurrentCheckListIndex == "CL1":
@@ -45,7 +45,7 @@ class nextchecklist(Action):
             dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
             return [SlotSet("CCLI", "CL2")]
         elif CurrentCheckListIndex == "CL2":
-            dispatcher.utter_message("Machen wir weiter mit Webseiten! 🌍 \n Du solltest nicht Webseite besuchen, die du findest!")
+            dispatcher.utter_message("Machen wir weiter mit Webseiten! 🌍 \n Du solltest nicht alle Webseite besuchen, die du findest!")
             dispatcher.utter_message("Besuche nur Webseiten mit SSL Verbindung (Grünes Schloss 🔒 neben der Link Leiste) \n Überprüfe regelmäßig deine Browsereinstellungen bezügl. Datenschutz 🌐 \n Achte bei Webseiten auf die geforderten Cookies im Cookie Banner. 🍪")
             buttons = [{"title": "Mehr Informationen 📥", "payload": "Mehr Info"}, {"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
             dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
@@ -58,13 +58,13 @@ class nextchecklist(Action):
             return [SlotSet("CCLI", "CL4")]
         elif CurrentCheckListIndex == "CL4":
             dispatcher.utter_message("Machen wir weiter mit VPN's 📶")
-            dispatcher.utter_message("Für einen Zusätzliche Schutz in öffentlichen Netzen kannst du einen VPN verwenden. \n Dieser Verschlüsselt deine gesendeten Informationen und schützt dich vor Attacken 🛡️.")
+            dispatcher.utter_message("Für einen zusätzlichen Schutz in öffentlichen Netzwerken kannst du einen VPN verwenden. \n Dieser Verschlüsselt deine gesendeten Informationen und schützt dich vor Attacken 🛡️.")
             buttons = [{"title": "Mehr Informationen 📥", "payload": "Mehr Info"}, {"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
             dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
             return [SlotSet("CCLI", "CL5")]
         elif CurrentCheckListIndex == "CL5":
             dispatcher.utter_message("Machen wir weiter mit Datenschutzeinstellungen 🌍")
-            dispatcher.utter_message("Um sich vor Tracking durch Cookies zu schützen ist es wichtig die Datenschutzeinstellungen des Browsers Korrect einzustellen. \n Dabei ist darauf zu achten, dass die Cookies 🍪 nach schließen des Browsers gelöscht werden sollten. \n Du kannst deine Mail überprüfen lassen, ob du bei einer gehackten Datenbank von einer Webseite, bei der du dich registriert hast, dabei bist. (Siehe Mailcheck Hilfe 🆘)")
+            dispatcher.utter_message("Um sich vor Tracking durch Cookies zu schützen, ist es wichtig die Datenschutzeinstellungen des Browsers Korrect einzustellen. \n Dabei ist darauf zu achten, dass die Cookies 🍪 nach schließen des Browsers gelöscht werden sollten. \n Du kannst deine Mail überprüfen lassen, ob du bei einer gehackten Datenbank von einer Webseite, bei der du dich registriert hast, dabei bist. (Siehe Mailcheck Hilfe 🆘)")
             buttons = [{"title": "Mehr Informationen 📥", "payload": "Mehr Info"}, {"title": "Mailcheck Hilfe 🆘", "payload": "Mailcheck Erklärung"}, {"title": "Weitermachen 🚀", "payload": "Nächster Schritt"}]
             dispatcher.utter_button_message("Möchtest du mehr Informationen, oder weitermachen?", buttons)
             return [SlotSet("CCLI", "CL6")]
